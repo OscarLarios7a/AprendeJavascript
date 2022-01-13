@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentos de JavaScript</h1>
+    <h2>Funciones</h2>
+    <script>
+        //* Una funcion es un bloque de codigo, autocontenido, que se puede definir una vez y ejecutar en cuaquier momento.
+        //Opcionalmente, una funcion puede aceptar parametros y devolver un valor.
+        //Las funciones en Javascript son objetos, untipo especial de objetos:
+        //Se dice que las funciones son cuidadanos de primera clase por que pueden asignarse a un valor, 
+        //y pueden pasarse como argumentoes y usarse como un valor de retorno.
+
+        //funcion Declarada sin envio de parametros y sin regreso de valor
+
+        function estoEsUnaFuncionDeclarada(){
+            console.log("Uno");
+            console.log("Dos");
+            console.log("Tres");
+        }
+        //Invocacion de funcion.
+        estoEsUnaFuncionDeclarada();
+
+        //funcion Declarada sin envio de parametros y con regreso de valor
+        function unaFuncionQueDevuelveValor(){
+            console.log("Uno");
+            console.log("Dos");
+            console.log("Tres");
+            return "La funcion devuelve un valor"
+        }
+     
+        console.log(unaFuncionQueDevuelveValor());
+
+     //funcion Declarada con envio de parametros y regreso de valor
+
+     let a=5
+        function unaFuncionConParametroQueDevuelveValor(a){
+            return a*2;
+        }
+        console.log(unaFuncionConParametroQueDevuelveValor(a));
+
+        let numeroUno=prompt("Ingresa un Numero");
+        let numeroDos=prompt("Ingresa otro numero");
+
+        if(numeroUno>numeroDos){
+            console.log(`El Numero ${numeroUno} es Mayor que el numero ${numeroDos}`);
+        } else if(numeroUno<numeroDos){
+                console.log(`El Numero ${numeroUno} es Menor que el numero ${numeroDos}`);
+        }else if(numeroUno==numeroDos){
+            console.log(`El Numero ${numeroUno} es igual que el numero ${numeroDos}`);
+        }
+            
+
+    </script>
+</body>
+</html>

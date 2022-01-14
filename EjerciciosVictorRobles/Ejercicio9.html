@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejercicio 9</h1>
+    <script>
+        
+        for(;;){
+            let numeroUno=parseInt(prompt("Ingresa un Numero"));
+            let numeroDos=parseInt(prompt("Ingresa otro numero"));
+            if(numeroUno>0 && numeroDos>0){
+                window.alert(`\n La suma de los Numero es: ${sumarNumeros(numeroUno,numeroDos)},\n La Resta de los Numero es: ${restarNumeros(numeroUno,numeroDos)}, \nLa Multiplicacion de los Numero es: ${multiplicarNumeros(numeroUno,numeroDos)}, \nLa Division de los Numero es: ${dividirNumeros(numeroUno,numeroDos)}`);
+            console.log(`La suma de los Numero es: ${sumarNumeros(numeroUno,numeroDos)}`);
+            console.log(`La Resta de los Numero es: ${restarNumeros(numeroUno,numeroDos)}`);
+            console.log(`La Multiplicacion de los Numero es: ${multiplicarNumeros(numeroUno,numeroDos)}`);
+            console.log(`La Division de los Numero es: ${dividirNumeros(numeroUno,numeroDos)}`);
+            break
+            }else{
+                window.alert("Ingresa un Dato correcto")
+            }
+        }
+
+        function sumarNumeros(a,b){
+            return a+b;
+        }
+        function restarNumeros(a,b){
+            return a-b;
+        }
+        function multiplicarNumeros(a,b){
+            return a*b;
+        }
+        function dividirNumeros(a,b){
+            return (parseFloat(a/b)).toFixed(2);
+        }
+    </script>
+</body>
+</html>

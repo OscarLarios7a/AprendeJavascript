@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejercicio 13</h1>
+        <div id="div1"></div>
+    <script>
+        
+        let array=new Array();
+
+        console.log(mostrarArray());
+        
+
+        function mostrarArray(){
+            let valorBuscar=parseInt(prompt("Valor a Buscar"));
+        for(i=1;i<=6;i++){
+            let numeroUno=parseInt(prompt(`Ingresa un Numero ${i}`));
+                array.push(numeroUno);
+            }
+            for(j=0;j<=array.length-1;j++){
+                //console.log(array[j]);
+                    if(array[j]==valorBuscar){
+                        console.log(`Valor del Array Encontrado ${array[j]} = ${valorBuscar}`);
+                    }else{
+                       console.log(`Valor del Array No Encontrado ${array[j]} = ${valorBuscar}`); 
+                    }
+                }
+            
+        }
+        //console.log(`\n El numero de Elementos son ${array.length}`);
+
+        document.body.onload=mostrarElemento;
+
+        function mostrarElemento(){
+            var newDiv=document.createElement("div");
+             var newContent=document.createTextNode(array +"Valor del Array Encontrado"+ array[j]+"="+ valorBuscar);
+            newDiv.appendChild(newContent);
+            var currentDiv=document.getElementById("div1");
+            document.body.insertBefore(newDiv,currentDiv);
+        }
+        
+    </script>
+</body>
+</html>

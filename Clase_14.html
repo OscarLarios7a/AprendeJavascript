@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentos de JavaScript</h1>
+    <h2>Condicionales if-else / Switch-Case</h2>
+    <script>
+        let edad=17;
+
+        if(edad>17){
+            console.log("Eres Mayor de Edad");
+        }else{
+            console.log("Eres Menor de Edad");
+        }
+
+        if(edad>=18){
+            console.log("Eres Mayor de Edad");
+        }else{  
+            console.log("Eres Menor de Edad");
+        }
+
+        if(edad<18){
+            console.log("Eres Menor de Edad");
+            
+        }else{
+            console.log("Eres Mayor de Edad");
+        }
+
+        if(edad<=17){
+            console.log("Eres Menor de Edad");
+    
+        }else{
+            console.log("Eres Mayor de Edad");
+        }   
+
+        console.log("Operador Ternario")
+        let eresMayor=(edad>=18)?"Eres Mayor de Edad" : "Eres Menor de Edad";
+        console.log(eresMayor);
+        /**SWITCH - CASE*/
+        let dia=2;
+
+        switch(dia){
+            case 0:
+                console.log("Domingo");
+                break;
+            case 1:
+                console.log("Domingo");
+                break;
+            case 2:
+                console.log("Domingo");
+                break;
+            case 3:
+                console.log("Domingo");
+            break;
+            case 4:
+                console.log("Domingo");
+                break;
+            case 5:
+                console.log("Domingo");
+                break;
+            case 6:
+                console.log("Domingo");
+                break;
+            default:
+                console.log("No Existe el Día");
+                break;
+        }
+
+    </script>
+</body>
+</html>

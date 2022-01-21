@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentos de JavaScript</h1>
+    <h2>Condicionales while / do-while  / for </h2>
+   <script>
+    // While 
+
+    let  contador=0;
+    while (contador<=10){
+        console.log("While"+ contador);
+        contador++;
+    }
+
+    //do-while
+    do{
+        console.log("While"+ contador);
+        contador++;
+    }while(contador<10);
+
+    
+    //for
+    let array=[00,10,20,30,40,50,60,70,80,90,100];
+    for (let index = 0; index < array.length; index++) {
+        console.log(array[index]);
+    }
+
+    //for in 
+    const json={
+        nombre:"Oscar",
+        apellido:"Larios",
+        edad:37
+    };
+
+    for (const propiedad in json) {
+    console.log(`Key: ${propiedad}, Value: ${json[propiedad]}`);
+    }
+
+    //forof
+    for (const elemento of array) {
+         console.log(elemento)
+    }
+
+    let cadena= "hola de nuevo tarados"
+    for (const caracter of cadena) {
+     console.log(caracter);
+    }
+
+    
+</script> 
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentos de JavaScript</h1>
+    <h2>Destructuracion </h2>
+    <script>
+        const numero=[0,1,2,3];
+        //sin destructuracion
+        let cero=numero[0],
+            uno=numero[1],
+            dos=numero[2],
+            tres=numero[3];
+        console.log(cero,uno,dos,tres);
+        
+
+        //Con Destructuracion
+        const [zero,one,two,three]=numero;
+        console.log(zero,one,two,three);
+
+        const persona={
+            nombre:"Oscar",
+            apellido:"Larios",
+            edad:37
+        };
+        
+        let{nombre,edad,apellido}=persona;
+        console.log(nombre,apellido,edadthree);
+ </script>
+</body>
+</html>

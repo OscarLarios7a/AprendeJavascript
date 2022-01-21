@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentos de JavaScript</h1>
+    <h2>Objetos Literales </h2>
+    <script>
+        let nombre="Oscar", edad = 37;
+
+        const perro={
+                nombre:nombre,
+                edad:37,
+                ladrar:function(){
+                    console.log("Wua Wua!!");
+                }
+            };
+
+        console.log(perro);
+        perro.ladrar();
+        
+        const dog={
+        nombre,
+        edad,
+        raza:"Callejero",
+        ladrar(){
+            console.log("Wua Wua Wua !!!");
+        }
+    };
+
+    console.log(dog);
+    dog.ladrar();
+ </script>
+</body>
+</html>

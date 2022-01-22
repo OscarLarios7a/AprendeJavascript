@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Asincronia en JavaScript</h1>
+    <h2>Promesas</h2>
+    <script>
+        function cuadradoPromise(valor){
+            if(typeof valor !== "number"){
+                return Promise.reject(`Error, el Valor "${valor}" Ingresado no es un numero`);
+            }
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve({
+                        valor,
+                        result:valor*valor
+                    });
+                },0|Math.random()*1000);
+            });
+        }
+        cuadradoPromise(0).then(obj=>{
+            console.log("Inicio de Promesa");
+            console.log(`Promise ${obj.valor} -- ${obj.result}`)
+            return cuadradoPromise(1);
+            }).then(obj=>{
+                console.log(`Promise ${obj.valor} -- ${obj.result}`)
+                return cuadradoPromise(2);
+            }).then(obj=>{
+                console.log(`Promise ${obj.valor} -- ${obj.result}`)
+                return cuadradoPromise(3);
+            }).then(obj=>{
+                console.log(`Promise ${obj.valor} -- ${obj.result}`)
+                return cuadradoPromise(4);
+            }).then(obj=>{
+                console.log(`Promise ${obj.valor} -- ${obj.result}`)
+                return cuadradoPromise(5);
+            }).then(obj=>{
+                console.log(`Promise ${obj.valor} -- ${obj.result}`)
+                console.log("Fin de Promesa");
+            }).catch(error=>console.log(error));
+
+
+    </script>
+</body>
+</html>

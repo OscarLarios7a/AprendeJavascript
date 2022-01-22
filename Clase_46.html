@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Asincronia en JavaScript</h1>
+    <h2>CallBacks</h2>
+    <script>
+        function cuadradoCallBack(valor,callback){
+            setTimeout(()=>{
+                callback(valor, valor*valor);
+            },0|Math.random()*100);
+        }
+
+        cuadradoCallBack(0,(valor,resultado)=>{
+            console.log("Inicia CallBack");
+            console.log(`CallBack: ${valor} -- ${resultado}`);
+            cuadradoCallBack(1,(valor,resultado)=>{
+                console.log(`CallBack: ${valor} -- ${resultado}`);
+                cuadradoCallBack(2,(valor,resultado)=>{
+                    console.log(`CallBack: ${valor} -- ${resultado}`);
+                    cuadradoCallBack(3,(valor,resultado)=>{
+                        console.log(`CallBack: ${valor} -- ${resultado}`);
+                        cuadradoCallBack(4,(valor,resultado)=>{
+                            console.log(`CallBack: ${valor} -- ${resultado}`);
+                            cuadradoCallBack(5,(valor,resultado)=>{
+                                console.log(`CallBack: ${valor} -- ${resultado}`);
+                            });
+                        });
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

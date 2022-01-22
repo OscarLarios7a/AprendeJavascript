@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentos de JavaScript</h1>
+    <h2>Funciones Anonima AutoEjecutable </h2>
+    <script>
+        //funcion anónima autoEjecutable
+        (function(){
+            console.log("Mi primer IIFE");
+        })();
+
+        (function(c,d,w){
+            console.log("Mi Segunda IIFE");
+            console.log(d);
+            console.log(w);
+            c.log("Este es un console.log")
+        })(console,document,window);
+
+        //Formas de escribir las funciones anonimas autoejecutables
+        //Forma Clasica
+        (function(){
+            console.log("Versión Clásica");
+        })();
+
+        //Forma La Crockford (JavaScript )
+        ((function(){
+            console.log("Versión Crockford");
+        })());
+
+        //Forma Unaria
+        +function(){
+             console.log("Versión Unaria");
+        }();
+
+        //Forma Facebook
+       !function(){
+            console.log("Versión Crockford");
+        }();
+    </script>
+</body>
+</html>

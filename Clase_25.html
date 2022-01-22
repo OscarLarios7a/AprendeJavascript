@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentos de JavaScript</h1>
+    <h2>Métodos estaticos, getters y setters </h2>
+    <script>
+        //Creacion de la Clase de Animal
+   class Animal{
+       constructor(nombre, genero){
+       this.nombre=nombre;
+       this.genero=genero;
+       }
+
+       //Metodos agregados al prototipo de la funcion constru
+    sonar(){
+    console.log("Hago sonidos por que estoy vivo");
+    }
+    saluda(){
+    console.log(`hola me Llamo: ${this.nombre}`);
+    }
+   }
+   //Creacion de la Clase de Perro
+   class Perro extends Animal(){
+       constructor(nombre,genero,tamanio){
+        this.tamanio=tamanio;
+       }
+    sonar(){
+            console.log("Soy un Perro y mi sonido es un ladrido");
+        }
+    ladrar(){
+        console.log("Wuau Wuau Wuau");
+        }
+        
+        //un metodo estatico se pueden ejecutar sin necesidad de instanciar la clase
+        static queEres(){
+            console.log("los perros somos animales mamiferos que pertenecemos a la familia de los caninos,Somos considerados los mejores amigos del hombre");
+        }
+
+        //los setters y getters son  metodos especiales que nos permiten establecer y obtener los valores de atributos de nuestra clase
+
+        get getRaza(){
+            return this.raza;
+        }
+
+        set setRaza(raza){
+            this.raza=raza;
+        }
+
+   }
+
+   Perro.queEres();
+
+   const mimi=new Animal("Mimi","Hembra");
+   const scooby=new Perro("Scooby","Macho","Gigante");
+
+   console.log(mimi);
+   mimi.saluda();
+   mimi.sonar();
+   console.log(scooby);
+   scooby.saluda();
+   scooby.sonar();
+   scooby.ladrar();
+   console.log(scooby.getRaza);
+   scooby.setRaza="Gran Danés";
+   console.log(scooby.getRaza);
+
+    </script>
+</body>
+</html>

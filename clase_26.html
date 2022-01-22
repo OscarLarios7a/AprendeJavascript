@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentos de JavaScript</h1>
+    <h2>Objeto Console </h2>
+    <script>
+
+        console.log("Un Registro de lo que ha pasado en nuestra aplicacion");
+        console.error("Esto es un error");
+        console.info("Este es un Mensaje Informativo");
+        console.warn("Esto es un Aviso");
+
+        let nombre="Oscar",apellido="Larios", edad=37;
+        console.log(nombre);
+         console.log(apellido);
+          console.log(edad);
+           console.log(`Hola mi nombres ${nombre} ${apellido} y tengo ${edad} años.`);
+         console.log('Hola mi nombre es %s %s y tengo %d años',nombre,apellido, edad);
+         console.clear();
+
+         console.log(window);
+         console.log(document);
+
+         console.dir(window);
+         console.dir(document);
+
+         console.clear();
+
+         console.group("Cursos de @jonmircha en YouTube")
+         console.log("Curso de JavaScript") 
+         console.log("Curso de Php");   
+         console.log("Curso de Node.J   S");
+         console.log("Curso de PWA's"); 
+         console.log("Curso de Diseño y  Desarrollo Web");
+         console.groupEnd();    
+        
+            console.groupCollapsed("Cursos de @jonmircha en YouTube")
+            console.log("Curso de JavaScript")
+            console.log("Curso de Php");
+            console.log("Curso de Node.JS");
+            console.log("Curso de PWA's");
+            console.log("Curso de Diseño y Desarrollo Web");
+            console.groupEnd();
+
+        console.clear();
+        console.table(Object.entries(console).sort());
+
+        let numeros=[1,2,3,4,5];
+        let vocales=["a","e","i","o","u"]
+
+        console.table(numeros);
+        console.table(vocales)
+
+        const perro={
+            nombre:"Boni",
+            raza:"Boxer",
+            color:"cafe"
+        }
+
+        console.table(perro);
+        console.clear();
+
+        console.time("Cuanto tiempo tarda mi codigo");
+        const arreglo=Array(1000000);
+        for(let i=0;i<arreglo.length;i++){
+            arreglo[i]=i;
+        }
+        console.timeEnd("Cuanto tiempo tarda mi codigo");
+        console.clear();
+
+        let  x=3, y=2, pruebaXY="Se espera que X siempre sea menor que Y";
+
+        console.assert(x<y,{x,y,pruebaXY});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentos de JavaScript</h1>
+    <h2>Expresiones Regulares </h2>
+    <script>
+        
+        let cadena="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a lacinia lorem. Donec nisi nisl, auctor eget nibh vel, tempor ultricies ligula. Aliquam porttitor felis quis sapien hendrerit, et facilisis metus tempus. Nulla quis laoreet ipsum. In sit amet sem eu odio bibendum cursus non nec quam. Aenean et commodo eros, nec luctus nibh. Suspendisse quis vulputate sapien.";
+
+        let expReg=new RegExp("lorem","ig");
+        let expReg2=/lorem{1,3}/ig;
+
+        console.log(expReg.test(cadena));
+        console.log(expReg.exec(cadena));
+
+        console.log(expReg2.test(cadena));
+        console.log(expReg2.exec(cadena));
+
+
+    </script>
+</body>
+</html>

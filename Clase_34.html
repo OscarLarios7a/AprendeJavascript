@@ -7,12 +7,34 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Modulos en JavaScript</h1>
-    <script src="js/modulos.js" >
+    <h1>Ejercicios en JavaScript</h1>
+    <script>
 
-        
+      console.log("Ejercicio 1");
+      //1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
 
-//1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+     let cadena=prompt("Ingresa una cadena de Text");
+     let cont=0;
+     function contarCadena(word){
+      for(let i=0;i<=cadena.length-1;i++)
+      {cont++;}
+      return cont;
+     }
+     console.log(contarCadena(cadena));
+     //Seccion Video - Maestro
+     //function contarCaracteres(cadena=""){
+      //Validacion de la cadena
+    //   if (!cadena) {
+    //     console.warn("No Ingresaste una cadena");
+    //   } else {
+    //     console.info(`La Cadena "${cadena}" tiene "${cadena.length}" caractes`);
+    //   }
+    //  }
+     // Mejorando la funcion a traves de una function arrow
+     const contarCaracteres=(cadena="")=> (!cadena)? console.warn("No Ingresaste una cadena"): console.info(`La Cadena "${cadena}" tiene "${cadena.length}" caractes`);
+     contarCaracteres();
+     contarCaracteres(prompt("Ingresa una cadena de Text"));
+
 //2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
 //3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
 //4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
@@ -62,7 +84,7 @@ La clase recibirá un objeto al momento de instanciarse con los siguentes datos:
  Géneros Aceptados: Action, Adult, Adventure, Animation, Biography, Comedy, Crime, Documentary ,Drama, Family, Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western.
 */
     </script>
-    <script src="js/no_modulos.js" ></script>
+    
 </body>
 </html>
 

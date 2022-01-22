@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nuevos Tipos de Datos en JavaScript</h1>
+    <h2>Maps</h2>
+    <script>
+
+        //creando una variable que contendra los elementos del MAPA
+
+        const mapa=new Map();
+       
+        //enviando los elementos a la variable de mapa se utiliza el metodo set que es propiedad del objeto MAP
+        mapa.set("nombre","Oscar Javier"); //se manda la propiedad y el valor
+        mapa.set("apellido"," Pérez Larios");
+        mapa.set("edad",37);
+        mapa.set("puesto","Apoyo Técnico en CNBBBJ")
+
+        console.log(mapa); //imprimiendo lo que contiene la variable de mapa
+        console.log(mapa.size);// imprimiendo el tamaño de mi variable de mapa
+        //validando los elementos existentes de mi variable de mapa con el metodo has que es propiedad del Objeto Map()
+        console.log(mapa.has("correo"));
+        console.log(mapa.has("nombre"));
+        console.log(mapa.get("nombre"));
+        mapa.set("nombre","Eduardo Antonio");
+        console.log(mapa.get("nombre"));
+        mapa.delete("apellido");
+        mapa.set(19,"Dicinueve"); //se manda la propiedad y el valor
+        mapa.set(false,"falso");
+        mapa.set({},{});
+        console.log(mapa); //imprimiendo lo que contiene la variable de mapa
+
+        //recorriendo el mapa
+        for (let[key,value] of mapa) {
+            console.log(`Llave: ${key}, Valor: ${value}`); //imprimiendo lo que contiene la variable de mapa
+        }
+
+         const mapa2=new Map([
+             ["nombre","Clemente"],
+             ["edad",41],
+             ["animal","Perro"],
+             [null,"nulo"]
+         ]);
+
+         console.log(mapa2);
+
+        const llavesMapa=[...mapa2.keys()];
+        const valoresMapa=[...mapa2.values()];
+
+         console.log(llavesMapa);
+          console.log(valoresMapa);
+
+
+    </script>
+</body>
+</html>

@@ -1,1 +1,28 @@
-Clase_56.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nuevos Tipos de Datos en JavaScript</h1>
+    <h2>Propiedades Dinamicas de los Objetos</h2>
+    <script>
+        let aleatorio=Math.round(Math.random()*1000+5);
+        //creando un objeto que sera dinamico
+        const objUsuarios={
+            propiedad:"Valor",
+            [`id_${aleatorio}`]:"Valor Aleatorio"
+        };
+        console.log(objUsuarios);
+
+        const usuarios=["Oscar","Javier","Eduardo","Antonio","Areli","Marlene"];
+
+        //recorro el objto de usuarios anexando dinamicamente el valor y la propiedad del objeto de objUsuarios
+        usuarios.forEach((usuario,index)=>objUsuarios[`id_${index}`]=usuario);
+        console.log(objUsuarios);
+    </script>
+</body>
+</html>

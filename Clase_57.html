@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nuevos Tipos de Datos en JavaScript</h1>
+    <h2>Palabra Reservada this</h2>
+    <script>
+         console.log(this);
+         console.log(window);
+         console.log(this===window);
+
+         this.nombre="Contexto global";
+         console.log(this.nombre);
+         //funcion imprimir el objeto global de Window
+         function imprimir(){
+             console.log(this.nombre);
+         }
+         imprimir();
+         //creo un objeto que tendra una funcion de imprimir
+         const obj={
+             nombre:"Contexto Objeto",
+             imprimir:function(){
+                 console.log(this.nombre);
+             }
+         }
+         obj.imprimir();
+
+         const obj2={
+             nombre:"Contexto Objeto 2",
+             imprimir
+         }
+         obj.imprimir();
+
+         const obj3={
+             nombre:"Contexto Objeto 3",
+             imprimir:function(){
+                 console.log(this.nombre);
+             }
+         }
+
+    </script>
+</body>
+</html>

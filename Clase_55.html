@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nuevos Tipos de Datos en JavaScript</h1>
+    <h2>Proxies</h2>
+    <script>
+        //Creando un objeto
+        const persona={
+            nombre:"",
+            apellido:"",
+            puesto:"",
+            telefono:0,
+            edad:0
+        };
+
+        //Creo mi manejador para 
+        const manejador={
+            set(obj,prop,valor){
+                //haciendo una validacion de la propiedad original con la vinculacion del proxie
+                if(Object.keys(obj).indexOf(prop)===-1){
+                   return console.log(`La propiedad ${prop} no existe en el objeto persona`);
+                }
+                //realizando la validacion de dato que se esta ingresando
+                if((prop ==="nombre" || prop === "apellido" || prop==="puesto") && !(/^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$/g.test(valor))){
+                    return console.log(`La propiedad "${prop}" no acepta Caracteres Númericos`);
+                }
+                if((prop ==="telefono" || prop === "edad") && !(/^[0-9\s]+$/g.test(valor))){
+                    return console.log(`La propiedad "${prop}" no acepta letras`);
+                }
+
+                obj[prop]=valor;
+            }
+        };
+        //creando un proxie para la vinculacion del objeto original con la copia sin modificar al original
+        const jon=new Proxy(persona,manejador);
+        jon.nombre="Oscar Larios ";
+        jon.apellido="Pérez Larios";
+        jon.puesto="Apoyo Técnico"
+        jon.edad=37;
+        jon.telefono=9512746599;
+        jon.twitter="@yanuz";
+
+        console.log(jon);
+        console.log(persona);
+
+
+
+
+    </script>
+</body>
+</html>

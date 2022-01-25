@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nuevos Tipos de Datos en JavaScript</h1>
+    <h2>Generators</h2>
+    <script>
+        // * el asterisco junto a la palabra function esto hace que se convierta en un Generator y dentro de la funcion se utilizara la propiedad yield
+        function* iterable(){
+            yield "hola";
+            console.log("Hola Consola");
+            yield "hola 2";
+            console.log("Seguimos con mas instrucciones de nuestro codigo");
+            yield "hola 3";
+            yield "hola 4";
+        }
+            let iterador=iterable();
+            /*
+            console.log(iterador.next());
+            console.log(iterador.next());
+            console.log(iterador.next());
+            console.log(iterador.next());
+            console.log(iterador.next());
+            */
+
+            for (const y of iterador) {
+                console.log(y);
+            }
+            const arr=[...iterable()];
+            console.log(arr);
+
+            //funcion para iterar un numero al cuadrado
+            function cuadrado(valor){
+                setTimeout(()=>{
+                    return console.log({valor,resultado:valor*valor})
+                },Math.random()*1000);
+            }
+
+            function* generador(){
+                console.log("Inicia Generator");
+                yield cuadrado(0);
+                yield cuadrado(1);
+                yield cuadrado(2);
+                yield cuadrado(3);
+                yield cuadrado(4);
+                yield cuadrado(5);
+                console.log("finaliza Generator");
+            }
+
+            let gen=generador();
+
+            for (const y of gen) {
+                console.log(y);
+            }
+
+    </script>
+</body>
+</html>

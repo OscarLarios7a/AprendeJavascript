@@ -35,14 +35,31 @@
              nombre:"Contexto Objeto 2",
              imprimir
          }
-         obj.imprimir();
+         obj2.imprimir();
 
          const obj3={
              nombre:"Contexto Objeto 3",
-             imprimir:function(){
+             imprimir:()=>{
                  console.log(this.nombre);
              }
          }
+
+         obj3.imprimir();
+
+         function Persona(nombre){
+             const that=this;
+             //this.nombre=nombre;
+             that.nombre=nombre;
+             /*return function(){
+                 console.log(this.nombre);
+             }*/
+             //return ()=>console.log(this.nombre);
+            return function(){
+                console.log(that.nombre,37);
+            }
+         }
+         let jon=new Persona("Larios");
+         jon();
 
     </script>
 </body>

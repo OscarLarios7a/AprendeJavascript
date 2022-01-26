@@ -1,0 +1,15 @@
+{
+    "cadena":"Oscar",
+    "numero":"37",
+    "boolean":"true",
+    "arreglo":[
+        "correr",
+        "programar",
+        "cocinar"
+    ],
+    "objeto":{
+        "twitter":"@Yanuz",
+        "email":"javier.atoaxaca@gmail.com"
+    },
+    "nulo":"null"
+}

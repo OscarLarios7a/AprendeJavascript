@@ -20,12 +20,29 @@ console.log("************Elementos del Documento*************");
 
 // document.write("<h2>Hola Mundo desde el DOM</h2>");
 
-// Clase_62
+console.log("************Clase 62*************");
 
 
 console.log(document.getElementsByTagName("li")); //por elemento
 console.log(document.getElementsByClassName("card"));//por clase del elemento
 console.log(document.getElementsByName("nombre"));//por nombre del elemento
 console.log(document.getElementById("menu")); //por id del elemento
-console.log(document.scripts);
+console.log(document.querySelector("#menu"));
+console.log(document.querySelectorAll("a"));
+console.log(document.querySelectorAll("a").length)
 
+
+document.querySelectorAll("a").forEach((el) => console.log(el));
+
+console.log(document.querySelector(".card"));
+console.log(document.querySelectorAll(".card"));
+console.log(document.querySelector(".card")[2]);
+console.log(document.querySelector("#menu li"));
+console.log(document.querySelectorAll("#menu li"));
+
+// Clase_63
+console.log("************Clase 63*************");
+console.log(document.documentElement.lang);
+console.log(document.documentElement.getAttribute("lang"));
+console.log(document.querySelector(".link-dom").href);
+console.log(document.querySelector(".link-dom").getAttribute("href"));

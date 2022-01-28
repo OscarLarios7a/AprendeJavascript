@@ -22,7 +22,7 @@ console.log("************Elementos del Documento*************");
 
 console.log("************Clase 62*************");
 
-
+/*
 console.log(document.getElementsByTagName("li")); //por elemento
 console.log(document.getElementsByClassName("card"));//por clase del elemento
 console.log(document.getElementsByName("nombre"));//por nombre del elemento
@@ -39,10 +39,10 @@ console.log(document.querySelectorAll(".card"));
 console.log(document.querySelector(".card")[2]);
 console.log(document.querySelector("#menu li"));
 console.log(document.querySelectorAll("#menu li"));
-
+*/
 // Clase_63
 console.log("************Clase 63*************");
-console.log(document.documentElement.lang);
+/*console.log(document.documentElement.lang);
 console.log(document.documentElement.getAttribute("lang"));
 console.log(document.querySelector(".link-dom").href);
 console.log(document.querySelector(".link-dom").getAttribute("href"));
@@ -73,10 +73,10 @@ console.log($linkDom.dataset.description);
 console.log($linkDom.hasAttribute("data-id"));
 console.log($linkDom.removeAttribute("data-id"));
 console.log($linkDom.hasAttribute("data-id"));
-
+*/
 // Clase_64 DOM: Estilos y Variables CSS
 console.log("************Clase 64*************");
-
+/*
 const $linkDom2 = document.querySelector(".link-dom");
 
 console.log($linkDom2.style);
@@ -115,6 +115,28 @@ $body.style.color = varYellowColor;
 $html.style.setProperty("--dark-color", "#000000");
 varDarkColor = getComputedStyle($html).getPropertyValue("--dark-color");
 $body.style.setProperty("background-color", varDarkColor);
-
-// Clase_64 DOM: DOM: Clases CSS
+*/
+// Clase_65 DOM: Clases CSS
 console.log("************Clase 65*************");
+const $card = document.querySelector(".card");
+
+console.log($card);
+console.log($card.className); //className sirve para mostrar el nombre de la clase Css que estamos haciendo la referencia
+console.log($card.classList);//classLista sirve para mostrar las propiedades que tiene la Clase Css que estamos haciendo referencia
+
+console.log($card.classList.contains("rotate-45")); // con la propiedad de contains que esta dentro del metodo de classList nos sirve para verificar si tiene un una clases Css nuesto elemento a traves de un boolean  
+$card.classList.add("rotate-45");// el add es un metodo de la propiedad de classList el cual nos sirve para agregar una Clase Css a un elemento de nuestro Dom de HTML
+console.log($card.classList.contains("rotate-45")); 
+console.log($card.className);
+console.log($card.classList);
+$card.classList.remove("rotate-45");
+console.log($card.classList.contains("rotate-45"));
+$card.classList.toggle("rotate-45");
+console.log($card.classList.contains("rotate-45"));
+$card.classList.toggle("rotate-45");
+console.log($card.classList.contains("rotate-45"));
+$card.classList.toggle("rotate-45");
+$card.classList.replace("rotate-45","rotate-135");
+$card.classList.add("opacity-80","sepia");
+$card.classList.remove("opacity-80","sepia");
+$card.classList.toggle("opacity-80","sepia");

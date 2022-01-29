@@ -250,7 +250,7 @@ document.body.appendChild($ul3);
 
 // Clase_69 DOM: Templates HTML
 console.log("************Clase 69*************");
-
+/*
 const $cards = document.querySelector(".cards");
 const $template = document.getElementById("template-card").content; // seleccionando un elemento de mi Dom
 const $fragmento = document.createDocumentFragment();
@@ -285,14 +285,95 @@ cardContent.forEach((el) => {
     $fragmento.appendChild($clone);
 });
 $cards.appendChild($fragmento);
-
+*/
 // Clase_70 DOM: Modificando Elementos (Old Style)
 console.log("************Clase 70*************");
+
+/*
 const $cards = document.querySelector(".cards");
 const $newCard = document.createElement("figure");
-
+const $cloneCards = $cards.cloneNode(true); // con la sentencia true clonara todos los elementos del padre e hijos
 $newCard.innerHTML = `
 <img src="https://placeimg.com/200/200/any" alt="Any">
     <figcaption>Any</figcaption>
 `;
 $newCard.classList.add("card");
+
+$cards.replaceChild($newCard, $cards.children[3]); // esto sirve para reemplazar un elemento que existe por uno nuevo
+
+$cards.insertBefore($newCard, $cards.firstElementChild); // agrega un elemento
+$cards.insertBefore($newCard, $cards.lastElementChidl);
+$cards.removeChild($cards.lastElementChild);
+
+document.body.appendChild($cloneCards);
+*/
+// Clase_71. DOM: Modificando Elementos (Cool Style)
+console.log("************Clase 71*************");
+
+/* 
+Metodos nuevos para insercion de elementos dentro del codigo de HTML
+insertAdjacentElement(position, el);
+insertAdjacentHTML(position,html);
+insertAdjacentText(position, text);
+
+Posisiones son de acuerdo al elemento donde queremos insertar el nuevo objeto del elemento
+beforebegin(hermano anterior)
+afterbegin(primer hijo)
+beforeend(ultimo hijo)
+afterend(hermano siguiente)
+*/
+
+/*
+const $cards = document.querySelector(".cards");
+const $newCard = document.createElement("figure");
+
+let $contentCard=`
+<img src="https://placeimg.com/200/200/any" alt="Any">
+    <figcaption></figcaption>
+`;
+$newCard.classList.add("card");
+//$cards.insertAdjacentElement("beforebegin", $newCard);
+//$cards.insertAdjacentElement("afterBegin", $newCard);
+//$cards.insertAdjacentElement("beforeEnd", $newCard);
+$newCard.insertAdjacentHTML("beforeend", $contentCard);
+$newCard.querySelector("figcaption").insertAdjacentText("afterbegin", "Any");
+//$cards.insertAdjacentElement("afterBegin", $newCard);
+
+//Manera Moderna par ainsertar elementos antes y despues de un elemento
+/*$cards.prepend($newCard);
+$cards.append($newCard);
+$cards.before($newCard);
+$cards.after($newCard);*/
+// Clase_72. DOM: Manejadores de Eventos
+console.log("************Clase 72*************");
+
+// atraves de una funcionn
+function holaMundo() {
+    alert("Hola Tarado");
+    console.log(event);
+}
+
+// a traves de un evento semantico
+const $eventoSemantico = document.getElementById("evento-semantico");
+
+$eventoSemantico.onclick = holaMundo;
+
+$eventoSemantico.onclick = function (e) {
+    alert("Hola Tarado, esto es un manejador de Evento Semantico");
+    console.log(e);
+    console.log(event);
+};
+// atraves de un evento multiple con la propiedad addEventListener
+const $eventoMultiple = document.getElementById("evento-multiple");
+$eventoMultiple.addEventListener("click", holaMundo);
+$eventoMultiple.addEventListener("click", (e) => {
+    alert("Hola Tarado, esto es un manejador de Eventos Multiples");
+    console.log(e);
+    console.log(e.type);
+    console.log(e.target);
+    console.log(event);
+    
+});
+
+// Clase_73 DOM: Eventos con Parámetros y Remover Eventos
+console.log("************Clase 73*************");

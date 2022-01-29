@@ -118,7 +118,7 @@ $body.style.setProperty("background-color", varDarkColor);
 */
 // Clase_65 DOM: Clases CSS
 console.log("************Clase 65*************");
-const $card = document.querySelector(".card");
+/*const $card = document.querySelector(".card");
 
 console.log($card);
 console.log($card.className); //className sirve para mostrar el nombre de la clase Css que estamos haciendo la referencia
@@ -139,4 +139,111 @@ $card.classList.toggle("rotate-45");
 $card.classList.replace("rotate-45","rotate-135");
 $card.classList.add("opacity-80","sepia");
 $card.classList.remove("opacity-80","sepia");
-$card.classList.toggle("opacity-80","sepia");
+$card.classList.toggle("opacity-80","sepia");*/
+
+// Clase_66 DOM: Texto y HTML
+console.log("************Clase 66*************");
+/*
+const $whatIsDom = document.getElementById("que-es");
+
+let text = `
+<p>
+El modelo de objetos del documento (<b><i>DOM - Document Object Model </i></b>) es un  API para documentos HTML y XML
+</p>
+<p>
+este Provee una representacion estructural del documento, permitiendo modificar su contenido y presentacion visual mediante codigo.
+</p>
+<p>
+<mark>
+El DOM no es parte de la especificacion de JavaScript, es una API para los navegadores.
+</mark>
+</p>
+`;
+
+// $whatIsDom.innerText = text; // lo pone como un texto
+$whatIsDom.textContent = text;
+$whatIsDom.innerHTML = text;  //el innerHTML sirva para agregar mas elementos a un elemento padre
+$whatIsDom.outerHTML = text; //el outerHTML sirva para agregar mas elementos por separado eliminando a un elemento padre
+*/
+// Clase_67 DOM Traversing: Recorriendo el DOM
+console.log("************Clase 67*************");
+/*
+$cardDom = document.querySelector(".cards");
+console.log($cardDom);
+console.log($cardDom.children);
+console.log($cardDom.children[2]);
+
+console.log($cardDom.parentElement);
+console.log($cardDom.firstElementChild);
+console.log($cardDom.lastElementChild);
+console.log($cardDom.previousElementSibling);
+console.log($cardDom.nextElementSibling);
+console.log($cardDom.closest("div"));//es un metodo que busca el anscentro mas cercano 
+console.log($cardDom.closest("body"));
+console.log($cardDom.children[3].closest("section"));
+*/
+// Clase_68 DOM: Creando Elementos y Fragmentos
+console.log("************Clase 68*************");
+
+const $figure = document.createElement("figure"),
+    $img = document.createElement("img"),
+    $figcaption = document.createElement("figcaption");
+    $figcaptionText = document.createTextNode("Tarado")
+    $cards = document.querySelector(".cards"),
+    $figure2=document.createElement("figure");
+    
+$img.setAttribute("src", "https://placeimg.com/200/200/animals");
+$img.setAttribute("alt", "Animals");
+$figure.classList.add("card");
+
+$figcaption.appendChild($figcaptionText);
+$figure.appendChild($img);
+$figure.appendChild ($figcaption);
+$cards.appendChild($figure);
+
+
+$figure2.innerHTML = `
+    <img src="https://placeimg.com/200/200/people" alt="People">
+    <figcaption>People</figcaption>
+`;
+
+$figure2.classList.add("card");
+$cards.appendChild($figure2);
+////////
+
+const estaciones = ["Primavera", "Verano", "Otoño", "Invierno"],
+    $ul1 = document.createElement("ul");
+
+document.write("<h3>Estaciones del Año</h3>");
+document.body.appendChild($ul1);
+
+estaciones.forEach((el) => {
+    const $li = document.createElement("li");
+    $li.textContent = el;
+    $ul1.appendChild($li);
+});
+
+
+///// mi parte 
+const continentes = ["Africa", "America", "Asia", "Europa", "Oceania"],
+    $ul2 = document.createElement("ul");
+
+document.write("<h3>Continentes del Mundo</h3>");
+document.body.appendChild($ul2);
+$ul.innerHTML = "";
+continentes.forEach((el) => ($ul2.innerHTML += `<li>${el}</li>`));
+
+const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+    $ul3 = document.createElement("ul"),
+    $fragmento = document.createDocumentFragment();
+    
+meses.forEach(el => {
+    const $li = document.createElement("li");
+    $li.textContent = el;
+    $fragmento.appendChild($li);
+});
+
+document.write("<h3>Meses del Año</h3>");
+$ul3.appendChild($fragmento);
+document.body.appendChild($ul3);
+

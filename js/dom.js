@@ -184,7 +184,7 @@ console.log($cardDom.children[3].closest("section"));
 */
 // Clase_68 DOM: Creando Elementos y Fragmentos
 console.log("************Clase 68*************");
-
+/*
 const $figure = document.createElement("figure"),
     $img = document.createElement("img"),
     $figcaption = document.createElement("figcaption");
@@ -246,4 +246,53 @@ meses.forEach(el => {
 document.write("<h3>Meses del Año</h3>");
 $ul3.appendChild($fragmento);
 document.body.appendChild($ul3);
+*/
 
+// Clase_69 DOM: Templates HTML
+console.log("************Clase 69*************");
+
+const $cards = document.querySelector(".cards");
+const $template = document.getElementById("template-card").content; // seleccionando un elemento de mi Dom
+const $fragmento = document.createDocumentFragment();
+const cardContent = [
+    {
+        title: "Tecnologia",
+        img: "https://placeimg.com/200/200/tech",
+    },
+    {
+        title: "Animales",
+        img: "https://placeimg.com/200/200/animals",
+    },
+    {
+        title: "Arquitectura",
+        img: "https://placeimg.com/200/200/arch",
+    },
+    {
+        title: "Personas",
+        img: "https://placeimg.com/200/200/people",
+    },
+    {
+        title: "Naturaleza",
+        img: "https://placeimg.com/200/200/nature",
+    }
+];
+cardContent.forEach((el) => {
+    $template.querySelector("img").setAttribute("src", el.img);
+    $template.querySelector("img").setAttribute("alt", el.title);
+    $template.querySelector("figcaption").textContent = el.title;
+
+    let $clone = document.importNode($template, true);
+    $fragmento.appendChild($clone);
+});
+$cards.appendChild($fragmento);
+
+// Clase_70 DOM: Modificando Elementos (Old Style)
+console.log("************Clase 70*************");
+const $cards = document.querySelector(".cards");
+const $newCard = document.createElement("figure");
+
+$newCard.innerHTML = `
+<img src="https://placeimg.com/200/200/any" alt="Any">
+    <figcaption>Any</figcaption>
+`;
+$newCard.classList.add("card");

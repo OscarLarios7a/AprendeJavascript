@@ -377,3 +377,26 @@ $eventoMultiple.addEventListener("click", (e) => {
 
 // Clase_73 DOM: Eventos con Parámetros y Remover Eventos
 console.log("************Clase 73*************");
+
+const $eventoRemover = document.getElementById("evento-removedor");
+const removerDobleClick = () => {
+    alert(`Removiendo el evento del tipo ${e.type}`);
+    console.log(e);
+    $eventoRemover.removeEventListener("dblclick", removerDobleClick);
+    $eventoRemover.disabled = true;
+}
+
+function saludar(nombre="Desconocido") {
+    alert(`Hola ${nombre}`);
+}
+
+// enviando parametros al evento a traves de una array function 
+$eventoMultiple.addEventListener("click", () => {
+    saludar();
+    saludar("Oscar Larios");
+});
+
+$eventoRemover.addEventListener("dblclick", removerDobleClick);
+
+// Clase_74 DOM: Flujo de Eventos (Burbuja y Captura) 
+console.log("************Clase 74*************");

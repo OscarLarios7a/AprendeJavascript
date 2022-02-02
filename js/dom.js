@@ -377,3 +377,5 @@ $eventoMultiple.addEventListener("click", (e) => {
 
 // Clase_73 DOM: Eventos con Parámetros y Remover Eventos
 console.log("************Clase 73*************");
+
+

@@ -346,7 +346,7 @@ $cards.before($newCard);
 $cards.after($newCard);*/
 // Clase_72. DOM: Manejadores de Eventos
 console.log("************Clase 72*************");
-
+/*
 // atraves de una funcionn
 function holaMundo() {
     alert("Hola Tarado");
@@ -374,10 +374,10 @@ $eventoMultiple.addEventListener("click", (e) => {
     console.log(event);
     
 });
-
+*/
 // Clase_73 DOM: Eventos con Parámetros y Remover Eventos
 console.log("************Clase 73*************");
-
+/*
 const $eventoRemover = document.getElementById("evento-removedor");
 const removerDobleClick = () => {
     alert(`Removiendo el evento del tipo ${e.type}`);
@@ -397,7 +397,28 @@ $eventoMultiple.addEventListener("click", () => {
 });
 
 $eventoRemover.addEventListener("dblclick", removerDobleClick);
+*/
 
 // Clase_74 DOM: Flujo de Eventos (Burbuja y Captura) 
 console.log("************Clase 74*************");
-console.log("************Clase 74*************");
+
+const $divEventos = document.querySelectorAll(".eventos-flujo div");
+
+function flujoEvento(e) {
+    console.log(`Hola te saluda ${this.className}, el click lo Origino ${e.target.className}`);
+}
+
+console.log($divEventos);
+
+$divEventos.forEach((div) => {
+    // en la fase de burbuja, que va desde el mas interno al externo con el tercer parametro de un boolean false
+    //div.addEventListener("click", flujoEnvento,);
+    //div.addEventListener("click", flujoEnvento, false);
+    // Fase de Captura , que va desde el externo al interno con el tercer parametro de un boolean true
+    //div.addEventListener("click", flujoEnvento, true);
+    
+    div.addEventListener("click", flujoEvento, {
+        capture: false,
+        once:true
+    });
+});

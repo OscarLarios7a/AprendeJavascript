@@ -566,3 +566,25 @@ console.log(location.hash);// Muestra el valor despues de un hash (#)
 console.log(location.pathname);// Muestra la pagina qu estamos consultando despues de /
 console.log(location.search); //muestra los datos que pasaste como parametros que se pasan por la URL
 //location.reload(); // sirve para recargar la URL de la PAgina
+
+
+console.log("************Object History*************");
+console.log(history);
+console.log(history.length); // longitud de las paginas visitadas
+console.log(history.back); // te regresa a una pagina atras o te regresa a la longitud d ela pagina q tu pidas
+console.log(history.forward); // te envia a la pagina o paginas q a estabas anteriormente antes del back 
+console.log(history.go); //te muestra la pagina a la q quieres ir
+
+
+console.log("************Object History*************");
+console.log(navigator);
+console.log(navigator.connection); // sirve para ver la conectividad con el internet
+console.log(navigator.geolocation);//
+console.log(navigator.mediaDevices);//
+console.log(navigator.mimeTypes);//
+console.log(navigator.onLine);//
+console.log(navigator.serviceWorker);//
+console.log(navigator.storage); //
+console.log(navigator.usb);// para saber si hay un dispositivo movil esta conectado al Equipo
+console.log(navigator.userAgent);
+

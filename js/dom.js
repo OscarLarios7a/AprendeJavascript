@@ -527,7 +527,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
 });
 */
 // Clase_78 BOM: Métodos
-console.log("************Clase 78*************");
+console.log("************Clase 78*************")
+/*
 //alert();
 //confirm();
 //prompt();
@@ -550,3 +551,18 @@ $btnCerrarVentana.addEventListener("click",(e)=>{
 $btnImprimirVentana.addEventListener("click",(e)=>{
      window.print();
  });
+*/
+ // Clase_79 BOM: Objetos: URL, Historial y Navegador 
+console.log("*******Clase 79*************");
+console.log("************Object URL*************");
+console.log(location); //Muestra todos los elementos que maneja, propiedades
+console.log(location.origin);// Muestra la ruta origen de la Pagina 
+console.log(location.protocol);// Muestra el protocolo de la pagina sea http o https
+console.log(location.host);// muestra la direccion ip del host del equipo o nombre del dominio
+console.log(location.hostname);// el nombre del dominio o el nombre del host del Equipo
+console.log(location.port);//Muestra el puerto el que escucha el servidor
+console.log(location.href);//muestra la URL de la Pagina
+console.log(location.hash);// Muestra el valor despues de un hash (#)
+console.log(location.pathname);// Muestra la pagina qu estamos consultando despues de /
+console.log(location.search); //muestra los datos que pasaste como parametros que se pasan por la URL
+//location.reload(); // sirve para recargar la URL de la PAgina

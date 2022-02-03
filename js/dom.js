@@ -401,24 +401,152 @@ $eventoRemover.addEventListener("dblclick", removerDobleClick);
 
 // Clase_74 DOM: Flujo de Eventos (Burbuja y Captura) 
 console.log("************Clase 74*************");
-
+/*
 const $divEventos = document.querySelectorAll(".eventos-flujo div");
+const $linkEventos = document.querySelector(".eventos-flujo a"); // Codigo de la Clase 75 DOM: stopPropagation & preventDefault
 
 function flujoEvento(e) {
     console.log(`Hola te saluda ${this.className}, el click lo Origino ${e.target.className}`);
+    e.stopPropagation(); // Codigo de la Clase 75 DOM: stopPropagation & preventDefault
+    
 }
 
 console.log($divEventos);
 
 $divEventos.forEach((div) => {
     // en la fase de burbuja, que va desde el mas interno al externo con el tercer parametro de un boolean false
-    //div.addEventListener("click", flujoEnvento,);
+    div.addEventListener("click", flujoEnvento);
     //div.addEventListener("click", flujoEnvento, false);
     // Fase de Captura , que va desde el externo al interno con el tercer parametro de un boolean true
     //div.addEventListener("click", flujoEnvento, true);
     
-    div.addEventListener("click", flujoEvento, {
-        capture: false,
-        once:true
-    });
+    //div.addEventListener("click", flujoEvento, {
+    //    capture: false,
+    //    once:true
+    //});
 });
+
+// Codigo de la Clase 75 DOM: stopPropagation & preventDefault
+$linkEventos.addEventListener("click", (e) => {
+    alert("Hola soy tu amigo y docente digital ... Oscar Larios");
+    e.preventDefault(); //sirve para cancelar el evento que traemos de referencia 
+    e.stopPropagation(); // sirve para evitar la programacion del  evento que tenemos de referencia
+});
+*/
+// Clase 75 DOM: stopPropagation & preventDefault
+console.log("************Clase 75*************");
+/*
+const $divEventos = document.querySelectorAll(".eventos-flujo div");
+const $linkEventos = document.querySelector(".eventos-flujo a"); // Codigo de la Clase 75 DOM: stopPropagation & preventDefault
+
+function flujoEvento(e) {
+    console.log(`Hola te saluda ${this.className}, el click lo Origino ${e.target.className}`);
+    e.stopPropagation(); // Codigo de la Clase 75 DOM: stopPropagation & preventDefault
+    
+}
+
+console.log($divEventos);
+
+$divEventos.forEach((div) => {
+    // en la fase de burbuja, que va desde el mas interno al externo con el tercer parametro de un boolean false
+    div.addEventListener("click", flujoEnvento);
+    //div.addEventListener("click", flujoEnvento, false);
+    // Fase de Captura , que va desde el externo al interno con el tercer parametro de un boolean true
+    //div.addEventListener("click", flujoEnvento, true);
+    
+    //div.addEventListener("click", flujoEvento, {
+    //    capture: false,
+    //    once:true
+    //});
+});
+
+// Codigo de la Clase 75 DOM: stopPropagation & preventDefault
+$linkEventos.addEventListener("click", (e) => {
+    alert("Hola soy tu amigo y docente digital ... Oscar Larios");
+    e.preventDefault(); //sirve para cancelar el evento que traemos de referencia 
+    e.stopPropagation(); // sirve para evitar la programacion del  evento que tenemos de referencia
+});
+*/
+// Clase_76 DOM: Delegación de Eventos
+console.log("************Clase 76*************");
+/*
+// function flujoEvento(e) {
+    // console.log(`Hola te saluda ${this}, el click lo Origino ${e.target.className}`);
+    // 
+// }
+
+document.addEventListener("click", (e) => {
+    console.log("Click en ", e.target);
+    if (e.target.matches(".eventos-flujo div")) {
+        //flujoEvento(e); // hago la llamada a la funcion que envio como parametro el Evento
+        console.log(`Hola te saluda ${this}, el click lo Origino ${e.target.className}`);
+    }
+
+    if (e.target.matches(".eventos-flujo a")) {
+         alert("Hola soy tu amigo y docente digital ... Oscar Larios");
+         e.preventDefault(); //sirve para cancelar el evento que traemos de referencia 
+    }
+});
+*/
+// Clase_77 BOM: Propiedades y Eventos
+console.log("************Clase 77*************");
+/*
+window.addEventListener("resize", (e) => {
+    console.clear();
+    console.log("************Evento Resize**************");
+    console.log(window.innerWidth);
+    console.log(window.innerHeight);
+    console.log(window.outerWidth);
+    console.log(window.outerHeight);
+    console.log(window.scrollX);
+    console.log(window.scrollY);
+    console.log(e);
+});
+window.addEventListener("scroll", (e) => {
+    console.clear();
+    console.log("************Evento Scroll**************");
+    console.log(window.scrollX);
+    console.log(window.scrollY);
+    console.log(e);
+});
+
+window.addEventListener("load", (e) => {
+    //console.clear();
+    console.log("************Evento Load la Ventana**************");
+    console.log(window.screenX);
+    console.log(window.screenY);
+    console.log(e);
+});
+
+document.addEventListener("DOMContentLoaded", (e) => {
+    //console.clear();
+    console.log("************Evento DOMContentLoaded**************");
+    console.log(screenX);
+    console.log(screenY);
+    console.log(e);
+});
+*/
+// Clase_78 BOM: Métodos
+console.log("************Clase 78*************");
+//alert();
+//confirm();
+//prompt();
+
+const $btnAbrirVentana = document.getElementById("abrir-ventana"),
+    $btnCerrarVentana = document.getElementById("cerrar-ventana"),
+    $btnImprimirVentana= document.getElementById("imprimir-ventana");
+//const $btnCerrarVentana = document.getElementById("cerrar-ventana");
+//const $btnImprimirVentana = document.getElementById("imprimir-ventana");
+
+let ventana;
+
+$btnAbrirVentana.addEventListener("click", (e) => {
+    ventana = window.open("https://github.com/Dionakra/awesome-official-courses");
+});
+
+$btnCerrarVentana.addEventListener("click",(e)=>{
+    ventana.close();
+});
+$btnImprimirVentana.addEventListener("click",(e)=>{
+     window.print();
+ });

@@ -1,0 +1,198 @@
+*,
+*:before,
+*:after{
+/*padding: 0;
+margin: 0;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
+/*box-sizing:border-box;*/
+box-sizing:inherit;
+}
+
+/*Seccion de Variables */
+
+:root{
+    --main-font:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --font-size:16px;
+    --main-color:#ffd700;
+    --second-color:#222;
+    --main-modal-color: rgba(93, 133, 133,0.85);
+    --second-modal-color:rgba(34,34,34,0.85);
+    --container-width:1200px;
+}
+html{
+    box-sizing: border-box;
+    font-family: var(--main-font);
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* **Para la Seccion del Menu de Hamburguesa ** */
+header{
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+    background-color: var(--main-color);
+    color:var(--second-color);
+}
+header h1{
+    margin: 0 auto;
+    text-align: center;
+}
+.section{
+    padding: 2rem;
+    padding-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: var(--container-width);
+    min-height: 100vh;
+    text-align: center;
+}
+/*******/
+/* Seccion mia */
+/*
+.fondo{
+    background-color: gold;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}*/
+
+/* *Este seccion es del Curso* */
+
+
+.panel{
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--second-modal-color);
+    transition: transform .3s ease;
+    transform: translate(0,-100%);
+    
+}
+
+.panel.active{
+    transform: translate(0,0);
+}
+
+.panel-btn{
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vw;
+    width:  4rem;
+    height: 4rem;
+    border-radius:50% ;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+.menu{
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.menu a{
+        text-decoration: none;
+        padding: 3rem;
+        width: inherit;
+        display: block;
+        font-size: 1.5rem;
+        color: var(--main-color);
+        transition: all 0.3s ease;
+}
+
+.menu a:hover{
+    font-weight: bold;
+    color: var(--second-color);
+    background-color: var(--main-modal-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECCION MIA */
+/*
+.menulogo{
+    background-color: rgb(93, 133, 133);
+}
+.menu{
+    width: 50%;
+    height: 100vh;
+    background-color: lightslategrey;
+    padding: 50px;
+    transform: translateX(-500px);
+    transition: 0.5s;
+}
+.menu li{
+    list-style-type: none;
+    border-bottom: 1px solid lightslategrey;
+    padding: 30px 0;
+    text-align: center;
+}
+.showmenu{
+    transform: translateX(0);
+}
+.menu li:last-child{
+    border-bottom: none;
+}
+.menu li:first-child{
+    font-weight: bold;
+}
+.menu li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    transition: font-weight 0.2s;
+}
+.menu .li a:hover{
+    font-weight: bold;
+}
+@media screen and (min-width:1000px) {
+    .menu{
+        width: 500px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .menu li a{
+        font-size: 16px;
+    }
+}
+*/

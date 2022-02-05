@@ -27,7 +27,7 @@ html{
 }
 body{
     margin: 0;
-    padding: 0;
+    /*padding: 0;*/
     overflow-x: hidden;
 }
 img{
@@ -38,6 +38,7 @@ img{
 /* **Para la Seccion del Menu de Hamburguesa ** */
 header{
     position: sticky;
+    z-index: 997;
     top: 0;
     padding: 1rem;
     background-color: var(--main-color);
@@ -86,6 +87,8 @@ header h1{
 
 .panel.active{
     transform: translate(0,0);
+    opacity: 1;
+    visibility: visible;
 }
 
 .panel-btn{

@@ -1,0 +1,213 @@
+/*RESETEO */
+/*creacion de variables para la manipulacion de los elementos*/
+:root{
+    --main-font: sans-serif;
+    --font-size:16px;
+    --main-color:#f7df1e;
+    --second-color:rgb(255, 255, 255);
+    --tercerd-color:rgba(51, 51, 49, 0.85);
+    --main-modal-color:rgba(247,222,30,0.85);
+    --second-modal-color:rgba(34,34,34,0.85);
+    --container-width:1200px;
+    /*Variables de los botones*/
+}
+html{
+    box-sizing: border-box;
+    font-family: var(--main-font);
+    font-size: var(--font-size);
+    scroll-behavior: smooth; /**/
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/*menu Hamburguesa */
+.header{
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+    background-color: var(--main-color);
+    color: var(--second-color);
+}
+
+.header h1{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section{
+    padding: 2rem;
+    padding-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: var(--container-width);
+    min-height: 100vh;
+    text-align: center;
+}
+
+.panel-btn{
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vw;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+}
+
+.panel{
+    position: fixed;
+    z-index: 998;
+    background-color: var(--second-modal-color);
+    width: 100%;
+    top:0; /*estira los elementos en toda direccion */
+    bottom: 0; /*estira los elementos en toda direccion */
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease,opacity 0.3s ease;
+    /*desplazamiento de arriba->Abajo*/
+    transform: translate(0,-100%);
+    /*desplazamiento de Abajo->Arriba*/
+    /*transform: translate(0,100%);*/
+    /*desplazamiento de Derecha -> Izquierda*/
+    /*transform: translate(100%,0);*/
+    /*desplazamiento de Izquierda -> Derecha */
+    /*transform: translate(-100%,0);*/
+}
+
+.panel.is-active{
+    transform: translate(0,0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/**Menu de Navegacion**/
+.menu{
+    width: inherit;
+    display: flex;
+    flex-direction: column; /*el menu se vera de forma vertical en ves de horizontal*/
+    justify-content: space-evenly; /*genera un espaciado a cada elemento a:href*/
+    align-items: center;
+    text-align: center;
+}
+
+.menu a{
+    text-decoration: none;
+    padding: 2rem;
+    width: inherit;
+    display: block;
+    font-size: 1.5rem;
+    color:var(--second-color);
+    transition: all 0.3s ease;
+}
+.menu a:hover{
+    font-weight: bold;
+    color: var(--second-modal-color);
+    background-color: var(--main-modal-color);
+}
+
+/*Estilos para los Botones de la Seccion de Reloj Digital y Alarma Digital*/
+.relojA{
+    width: 9rem;
+    height: 4rem;
+    border-radius: 10%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+}
+.relojA:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+}
+.relojD{
+    width: 9rem;
+    height: 4rem;
+    border-radius: 10%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #720505;
+    border-radius: 6px;
+    border: 2px solid #d60101;
+}
+.relojD:hover{
+    color: #720505;
+    background-color: #ffffff;
+}
+.alarmaA{
+    width: 9rem;
+    height: 4rem;
+    border-radius: 10%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+}
+.alarmaA:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+}
+.alarmaD{
+    width: 9rem;
+    height: 4rem;
+    border-radius: 10%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #720505;
+    border-radius: 6px;
+    border: 2px solid #d60101;
+}
+.alarmaD:hover{
+    color: #720505;
+    background-color: #ffffff;
+}
+
+/**Fin Seccion de Estilos para los Botones**/
+
+/**Eventos con el Teclado de la Clase 84 y 85**/
+/*Estilos para la clase stage y ball */
+.stage{
+    display: flex;
+    min-height: 50vh;
+    background-color: var(--tercerd-color);
+}
+.ball {
+    margin: auto;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}

@@ -211,3 +211,35 @@ img{
     border-radius: 50%;
     background-color: var(--main-color);
 }
+
+/**Eventos con el Elementos Regresivos de la Clase 86**
+/*Estilos para la clase countDown */
+
+/**Eventos con el Scroll Top Button Clase 87**
+/*Estilos para la clase scrollTopButton*/
+.scrollBtnTop{
+    position:fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: calc(4.25rem + 1vw);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--main-color);
+    color: var(--tercerd-color);
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    transition: all 0.3s ease-out;
+}
+.scrollBtnTop:hover{
+    background-color: var(--tercerd-color);
+    color: var(--main-color);
+}
+
+.hidden{
+    opacity: 0;
+    visibility: hidden;
+}

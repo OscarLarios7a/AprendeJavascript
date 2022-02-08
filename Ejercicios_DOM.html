@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-dark>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,7 @@
 
 
 </head>
-<body>
+<body data-dark>
     <header class="header">
         <h1>Ejercicios DOM</h1>
     </header>
@@ -21,16 +21,21 @@
     </button>
 <aside class="panel">
     <nav class="menu">
-        <a href="#seccion1">Reloj - Alarma </a>
+        <a href="#seccion1" >Reloj - Alarma </a>
         <a href="#seccion2">Eventos Teclado</a>
         <a href="#seccion3">Cuenta Regresiva</a>
-        <a href="#seccion4">Sección4</a>
+        <a href="#seccion4">Responsive JavaScript</a>
         <a href="#seccion5">Sección5</a>
+        <a href="#seccion6">Sección6</a>
+        <a href="#seccion7">Sección7</a>
+        <a href="#seccion8">Sección8</a>
+        <a href="#seccion9">Sección9</a>
+        <a href="#seccion10">Sección10</a>
     </nav>
 </aside>
 <main>
     <section id="seccion1" class="section">
-        <h2>Reloj Digital - Alarma</h2>
+        <h2 >Reloj Digital - Alarma</h2>
         <div id="reloj"> </div>
         <div>
             <button class="relojA" id="activar-reloj"> Iniciar - Reloj</button>
@@ -44,8 +49,8 @@
     <section id="seccion2" class="section">
         <h2>Eventos Teclado</h2>
         <!--Clase 85-->
-        <article class="stage">
-            <div class="ball"></div>
+        <article data-dark class="stage">
+            <div data-dark class="ball"></div>
         </article>
     </section>
      <!--Clase 86-->
@@ -54,14 +59,34 @@
         <div id="countDown"></div>
     </section>
     <section id="seccion4" class="section">
-        <h2>Sección4</h2>
+        <!--Clase 90-->
+        <h2>Responsive con JavaScript</h2>
+        <div id="youtube"></div>
+        <div id="mapa"></div>
     </section>
     <section id="seccion5" class="section">
         <h2>Sección5</h2>
     </section>
+    <section id="seccion6" class="section">
+        <h2>Sección6</h2>
+    </section>
+    <section id="seccion7" class="section">
+        <h2>Sección7</h2>
+    </section>
+    <section id="seccion8" class="section">
+        <h2>Sección8</h2>
+    </section>
+    <section id="seccion9" class="section">
+        <h2>Sección9</h2>
+    </section>
+    <section id="seccion10" class="section">
+        <h2>Sección10</h2>
+    </section>
 </main>
  <!--Clase 87-->
 <button class="scrollBtnTop hidden">&#11014</button>
+<button class="themeDark">🌙</button>
+<!--<button class="themeLight"> </button>-->
 <script type="module" src="./js/index_dom.js"></script>
 </body>
 </script>

@@ -243,3 +243,37 @@ img{
     opacity: 0;
     visibility: hidden;
 }
+
+/**Eventos con el Theme Dark Page Clase 88**
+/*Estilos para la clase themeDark*/
+
+.themeDark {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    left: 1rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--main-color);
+    color: var(--tercerd-color);
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    transition: all 0.3s ease-out;
+}
+
+.themeDark:hover{
+     background-color: var(--tercerd-color);
+     color: var(--main-color);
+}
+
+.darkMode{
+    background-color: var(--tercerd-color);
+    color: var(--main-color);
+}
+
+
+

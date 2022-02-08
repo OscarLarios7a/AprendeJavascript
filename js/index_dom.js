@@ -3,6 +3,7 @@ import { digitalReloj, alarmReloj } from "./dom/reloj.js";
 import { atajos, moverEsfera } from "./dom/teclado.js";
 import countDown from "./dom/cuenta_regresiva.js";
 import scrollTopBtn from "./dom/btn_scroll.js";
+import darkTheme from "./dom/theme.js";
 
 
 const d = document;
@@ -21,3 +22,5 @@ d.addEventListener("keydown", (e) => {
     atajos(e);
     moverEsfera(e,".ball",".stage");
 });
+
+darkTheme(".themeDark", "darkMode"); //Clase 89 

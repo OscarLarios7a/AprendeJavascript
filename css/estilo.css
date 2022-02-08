@@ -274,6 +274,21 @@ img{
     background-color: var(--tercerd-color);
     color: var(--main-color);
 }
-
-
+/** Clase 90 **/
+.responsive{
+    text-decoration: none;
+    border-radius: 10%;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #720505;
+    border-radius: 6px;
+    border: 2px solid #d60101;
+}
+.responsive:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+}
 

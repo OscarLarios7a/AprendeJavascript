@@ -9,7 +9,7 @@ export default function camaraWeb(id){
             then((strem) => {
                 console.log(strem);
                 $video.srcObject = strem;
-                $video.onplay();
+                $video.play();
              }).
             catch((err) => {
                 $video.insertAdjacentHTML("beforebegin", `<p><mark>${err}</mark></p>`);

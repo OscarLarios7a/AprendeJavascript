@@ -73,10 +73,13 @@ img{
 .panel{
     position: fixed;
     z-index: 998;
-    background-color: var(--second-modal-color);
-    width: 100%;
     top:0; /*estira los elementos en toda direccion */
     bottom: 0; /*estira los elementos en toda direccion */
+    left: 0;
+    right: 0;
+    width: 100%;
+    overflow-y: auto; /*se pone esta propiedad para generar un scroll para el panel*/
+    background-color: var(--second-modal-color);
     opacity: 0;
     visibility: hidden;
     transition: transform 0.3s ease,opacity 0.3s ease;
@@ -292,3 +295,18 @@ img{
     background-color: #ffffff;
 }
 
+/*Clase 93 DOM : Detección del estado de la red */
+.online.offline{
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #1b5e20;
+    color: #fff;
+}
+.offline{
+    background-color: #b71c1c;
+}

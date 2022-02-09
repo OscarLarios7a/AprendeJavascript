@@ -7,6 +7,9 @@ import darkTheme from "./dom/theme.js";
 import responsiveMediaquery from "./dom/responsive.js";
 import responsiveTest from "./dom/tester.js";
 import userAgentDeviceInfo from "./dom/userAgent.js";
+import cnxNetwork from "./dom/conectionRed.js";
+import camaraWeb from "./dom/camara.js";
+import getPosicionGeo from "./dom/geolocalizacion.js";
 
 const movil = `<a class="responsive" href="https://www.youtube.com/watch?v=6IwUl-4pAzc" target="_blank"> Ver Video </a>`;
 const desktop = `<iframe width="560" height="315" src="https://www.youtube.com/embed/6IwUl-4pAzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
@@ -24,6 +27,8 @@ d.addEventListener("DOMContentLoaded", (e) => {
     responsiveMediaquery("mapa", "(min-width:1024px)", mapaMovil, mapaDesktop);/**Clase 90**/
     responsiveTest("responsive-tester"); //Clase 91 DOM: Ejercicios Prácticos | Responsive Tester
     userAgentDeviceInfo("userDevice"); //92. DOM: Ejercicios Prácticos | Detección de Dispositivos User Agent 
+    camaraWeb("webcam");//Clase 94
+    getPosicionGeo("geolocation");
 });
 
 
@@ -34,3 +39,4 @@ d.addEventListener("keydown", (e) => {
 });
 
 darkTheme(".themeDark", "darkMode"); //Clase 89 
+cnxNetwork(); //Clase 93

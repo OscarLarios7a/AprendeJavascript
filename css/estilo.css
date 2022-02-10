@@ -33,6 +33,7 @@ img{
 /*menu Hamburguesa */
 .header{
     position: sticky;
+    z-index: 997;
     top: 0;
     padding: 1rem;
     background-color: var(--main-color);
@@ -334,4 +335,63 @@ img{
     visibility: hidden;
     opacity: 0;
     order: 1;
+}
+
+/* Clase 98. DOM: Ejercicios Prácticos | Responsive Slider  */
+/*Estilos de la Seccion de Slider Responsive */
+
+.slider{
+    position:relative ;
+    width: 80%;
+    margin: 1rem auto;
+    text-align: center;
+}
+.slider-slides{
+    position: relative;
+    height: 400px;
+}
+.slider-slide{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+    visibility: hidden;
+}
+.slider-slide img{
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    object-position:  50% 0%;
+}
+.slider-slide.active{
+    opacity: 1;
+    visibility: visible;
+}
+.slider-btn{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider a{
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border-radius:50%;
+    /*border: thin solid #fff;*/
+    text-decoration: none;
+    background-color: var(--tercerd-color);
+    color: var(--main-color);
+    transition: all 0.3s ease;
+    text-align: center;
+    font-size: 3rem;
+}
+.slider a:hover{
+    background-color:  var(--main-color);
+    color: var(--tercerd-color);
 }

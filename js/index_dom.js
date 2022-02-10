@@ -11,6 +11,8 @@ import cnxNetwork from "./dom/conectionRed.js";
 import camaraWeb from "./dom/camara.js";
 import getPosicionGeo from "./dom/geolocalizacion.js";
 import busquedaFiltro from "./dom/busqueda.js";
+import sorteoGanador from "./dom/sorteo.js";
+import slider from "./dom/slider.js";
 
 const movil = `<a class="responsive" href="https://www.youtube.com/watch?v=6IwUl-4pAzc" target="_blank"> Ver Video </a>`;
 const desktop = `<iframe width="560" height="315" src="https://www.youtube.com/embed/6IwUl-4pAzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
@@ -30,7 +32,9 @@ d.addEventListener("DOMContentLoaded", (e) => {
     userAgentDeviceInfo("userDevice"); //92. DOM: Ejercicios Prácticos | Detección de Dispositivos User Agent 
     camaraWeb("webcam");//Clase 94
     getPosicionGeo("geolocation");
-    busquedaFiltro(".card-filter",".card"); //Clase 96
+    busquedaFiltro(".card-filter", ".card"); //Clase 96
+    sorteoGanador("#winnerBtn", ".player"); //97. DOM: Ejercicios Prácticos | Sorteo Digital
+    slider();
 });
 
 

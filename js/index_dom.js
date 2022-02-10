@@ -13,6 +13,7 @@ import getPosicionGeo from "./dom/geolocalizacion.js";
 import busquedaFiltro from "./dom/busqueda.js";
 import sorteoGanador from "./dom/sorteo.js";
 import slider from "./dom/slider.js";
+import scrollSpia from "./dom/scrollSpy.js";
 
 const movil = `<a class="responsive" href="https://www.youtube.com/watch?v=6IwUl-4pAzc" target="_blank"> Ver Video </a>`;
 const desktop = `<iframe width="560" height="315" src="https://www.youtube.com/embed/6IwUl-4pAzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
@@ -35,6 +36,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
     busquedaFiltro(".card-filter", ".card"); //Clase 96
     sorteoGanador("#winnerBtn", ".player"); //97. DOM: Ejercicios Prácticos | Sorteo Digital
     slider();
+    scrollSpia();// 99. ScrollSpy con Intersection Observer 
 });
 
 

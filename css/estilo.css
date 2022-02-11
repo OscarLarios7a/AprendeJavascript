@@ -395,7 +395,13 @@ img{
     background-color:  var(--main-color);
     color: var(--tercerd-color);
 }
-/*Curso JavaScript: 99. DOM: Ejercicios Prácticos | ScrollSpy con Intersection Observer*/
+
+/*Clase 100. DOM: Video Inteligente (IntersectionObserver & VisibilityChange)*/
+.videoplay{
+    width: 100%;
+    height: 100%;
+}
+/*Clase: 99. DOM: Ejercicios Prácticos | ScrollSpy con Intersection Observer*/
 
 @media screen and (min-width:1024px) {
     body{

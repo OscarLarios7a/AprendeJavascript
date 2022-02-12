@@ -34,7 +34,7 @@
         <a data-scrollspy href="#seccion11">Sorteo Digital</a>
         <a data-scrollspy href="#seccion12">Slider Responsive</a>
         <a data-scrollspy href="#seccion13">Video Inteligente</a>
-        <a data-scrollspy href="#seccion14">Sección14</a>
+        <a data-scrollspy href="#seccion14">Validando Formulario</a>
         <a data-scrollspy href="#seccion15">Sección15</a>
 
     </nav>
@@ -152,7 +152,6 @@
         </ul>
         <button class="ganador" id="winnerBtn"> Generar Ganador</button>
     </section>
-
     <section id="seccion12" class="section" data-scrollspy>
         <h2>Slider Responsive</h2>
         <div class="slider">
@@ -189,8 +188,24 @@
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <video class="videoplay" src="./assets/cascada.mp4" muted controls loop data-smart-video></video>
     </section>
+    <!--Clase 101. DOM: Ejercicios Prácticos | Validación de Formularios con HTML5 -->
     <section id="seccion14" class="section" data-scrollspy>
-        <h2>Sección14</h2>
+        <h2>Validacion de Formulario</h2>
+        <form class="contact-form">
+            <legend>Envianos tus comentarios </legend>
+                <input type="text" name="name" placeholder="Escribe tu nombre" title="Nombres solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                <input type="email" name="email" placeholder="Escribe tu Email" title="Email es incorrecto" required pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
+                <input type="text" name="subject" placeholder="Asunto a Tratar" title="asunto es Requerido" required>
+                <textarea name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" data-pattern="^.{1,255}$"required></textarea>
+                <input type="submit" value="Enviar">
+                <div class="formLoader none">
+                    <img src="./assets/bars.svg" alt="Cargando">
+                </div>
+            </legend>
+            <div class="contactFormResponse none">
+                <p>Los Datos han sido enviados</p>
+            </div>
+        </form>
     </section>
     <section id="seccion15" class="section" data-scrollspy>
         <h2>Sección15</h2>

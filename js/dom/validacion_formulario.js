@@ -13,15 +13,17 @@ export default function contactoFormulario() {
         input.insertAdjacentElement("afterend", $span);
     });
     d.addEventListener((e) => {
-        if(e.target.matches(".contact-form [required]"))
+        if(e.target.matches(".contact-form [required]")){ 
             let $input = e.target;
-        let pattern = $input.pattern || $input.dataset.pattern;  //operador de corto circuito
-        if (pattern&& $input.value!=="") {
-            let regex = new RegExp(pattern);
-            return !regex.exec($input.value) ? d.getElementById($input.name).classList.add("is-active"):d.getElementById($input.name).classList.remove("is-active")
+            let pattern = $input.pattern || $input.dataset.pattern;  //operador de corto circuito
+
+            if (pattern&& $input.value!=="") {
+                let regex = new RegExp(pattern);
+                return !regex.exec($input.value) ? d.getElementById($input.name).classList.add("is-active") : d.getElementById($input.name).classList.remove("is-active");
         }
         if (!pattern) {
-            
-        }
+                return $input.value ==="" ? d.getElementById($input.name).classList.add("is-active"):d.getElementById($input.name).classList.remove("is-active")
+            }
+    }
     });
 }

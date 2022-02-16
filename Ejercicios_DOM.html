@@ -191,12 +191,12 @@
     <!--Clase 101. DOM: Ejercicios Prácticos | Validación de Formularios con HTML5 -->
     <section id="seccion14" class="section" data-scrollspy>
         <h2>Validacion de Formulario</h2>
-        <form class="contact-form">
+        <form action="https://formsubmit.co/javier.atoaxaca@gmail.com" method="POST" class="contact-form" target="_blank">
             <legend>Envianos tus comentarios </legend>
                 <input type="text" name="name" placeholder="Escribe tu nombre" title="Nombres solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
                 <input type="email" name="email" placeholder="Escribe tu Email" title="Email es incorrecto" required pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
                 <input type="text" name="subject" placeholder="Asunto a Tratar" title="asunto es Requerido" required>
-                <textarea name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" data-pattern="^.{1,255}$"required></textarea>
+                <textarea name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" data-pattern="^.{1,255}$" required title="Sobre pasa los 255 caracteres"></textarea>
                 <input type="submit" value="Enviar">
                 <div class="formLoader none">
                     <img src="./assets/bars.svg" alt="Cargando">

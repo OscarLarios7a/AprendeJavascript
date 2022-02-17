@@ -16,6 +16,7 @@ import slider from "./dom/slider.js";
 import scrollSpia from "./dom/scrollSpy.js";
 import inteligentVideo from "./dom/videoInteligent.js";
 import contactoFormulario from "./dom/validacion_formulario.js";
+import speechReader from "./dom/narrador.js";
 
 const movil = `<a class="responsive" href="https://www.youtube.com/watch?v=6IwUl-4pAzc" target="_blank"> Ver Video </a>`;
 const desktop = `<iframe width="560" height="315" src="https://www.youtube.com/embed/6IwUl-4pAzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
@@ -41,6 +42,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
     scrollSpia();// 99. ScrollSpy con Intersection Observer 
     inteligentVideo();
     contactoFormulario();//102. DOM: Ejercicios Prácticos | Validación de Formularios 
+
 });
 
 
@@ -52,3 +54,4 @@ d.addEventListener("keydown", (e) => {
 
 darkTheme(".themeDark", "darkMode"); //Clase 89 
 cnxNetwork(); //Clase 93
+speechReader(); //!clase 104. DOM: Ejercicios Prácticos | Narrador (Lector de Voz)-->

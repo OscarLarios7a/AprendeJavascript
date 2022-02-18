@@ -1,22 +1,22 @@
 import hamburgerMenu from "./dom/menu_hamburguesa.js";
 import { digitalReloj, alarmReloj } from "./dom/reloj.js";
 import { atajos, moverEsfera } from "./dom/teclado.js";
-import countDown from "./dom/cuenta_regresiva.js";
+//import countDown from "./dom/cuenta_regresiva.js";
 import scrollTopBtn from "./dom/btn_scroll.js";
 import darkTheme from "./dom/theme.js";
-import responsiveMediaquery from "./dom/responsive.js";
+//import responsiveMediaquery from "./dom/responsive.js";
 import responsiveTest from "./dom/tester.js";
-import userAgentDeviceInfo from "./dom/userAgent.js";
+//import userAgentDeviceInfo from "./dom/userAgent.js";
 import cnxNetwork from "./dom/conectionRed.js";
-import camaraWeb from "./dom/camara.js";
-import getPosicionGeo from "./dom/geolocalizacion.js";
+//import camaraWeb from "./dom/camara.js";
+//import getPosicionGeo from "./dom/geolocalizacion.js";
 import busquedaFiltro from "./dom/busqueda.js";
 import sorteoGanador from "./dom/sorteo.js";
 import slider from "./dom/slider.js";
 import scrollSpia from "./dom/scrollSpy.js";
 import inteligentVideo from "./dom/videoInteligent.js";
 import contactoFormulario from "./dom/validacion_formulario.js";
-import speechReader from "./dom/narrador.js";
+//import speechReader from "./dom/narrador.js";
 
 const movil = `<a class="responsive" href="https://www.youtube.com/watch?v=6IwUl-4pAzc" target="_blank"> Ver Video </a>`;
 const desktop = `<iframe width="560" height="315" src="https://www.youtube.com/embed/6IwUl-4pAzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
@@ -28,14 +28,14 @@ d.addEventListener("DOMContentLoaded", (e) => {
     hamburgerMenu(".panel-btn", ".panel", ".menu a");
     digitalReloj("#reloj", "#activar-reloj", "#desactivar-reloj"); // se utiliza el simbolo de gato (#) ya que es un id y no una clase (.)
     alarmReloj("../assets/alarm.mp3", "#activar-alarma", "#desactivar-alarma");
-    countDown("countDown", "Feb 05,2022 21:18:30", "Feliz Cumple Anciano Tarado");
+    //countDown("countDown", "Feb 05,2022 21:18:30", "Feliz Cumple Anciano Tarado");
     scrollTopBtn(".scrollBtnTop");
-    responsiveMediaquery("youtube", "(min-width:1024px)",movil,desktop);/**Clase 90**/
-    responsiveMediaquery("mapa", "(min-width:1024px)", mapaMovil, mapaDesktop);/**Clase 90**/
-    responsiveTest("responsive-tester"); //Clase 91 DOM: Ejercicios Prácticos | Responsive Tester
-    userAgentDeviceInfo("userDevice"); //92. DOM: Ejercicios Prácticos | Detección de Dispositivos User Agent 
-    camaraWeb("webcam");//Clase 94
-    getPosicionGeo("geolocation");
+    //responsiveMediaquery("youtube", "(min-width:1024px)",movil,desktop);/**Clase 90**/
+    //responsiveMediaquery("mapa", "(min-width:1024px)", mapaMovil, mapaDesktop);/**Clase 90**/
+    //responsiveTest("responsive-tester"); //Clase 91 DOM: Ejercicios Prácticos | Responsive Tester
+    //userAgentDeviceInfo("userDevice"); //92. DOM: Ejercicios Prácticos | Detección de Dispositivos User Agent 
+    //camaraWeb("webcam");//Clase 94
+    //getPosicionGeo("geolocation");
     busquedaFiltro(".card-filter", ".card"); //Clase 96
     sorteoGanador("#winnerBtn", ".player"); //97. DOM: Ejercicios Prácticos | Sorteo Digital
     slider();
@@ -54,4 +54,4 @@ d.addEventListener("keydown", (e) => {
 
 darkTheme(".themeDark", "darkMode"); //Clase 89 
 cnxNetwork(); //Clase 93
-speechReader(); //!clase 104. DOM: Ejercicios Prácticos | Narrador (Lector de Voz)-->
+//speechReader(); //!clase 104. DOM: Ejercicios Prácticos | Narrador (Lector de Voz)-->

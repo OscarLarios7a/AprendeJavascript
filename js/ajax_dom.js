@@ -132,7 +132,7 @@
 (() => {
     const $axiosAsync = document.getElementById("axiosAsync");
     const $fragment = document.createDocumentFragment();
-    const url = "https://jsonplaceholder.typicode.com/users";
+    const url = "http://localhost:3000/santos";
     //axios.get(url);
     async function getAxios() { 
         try {
@@ -142,7 +142,7 @@
             console.log(respuesta, json);
             json.forEach((el) => {
                 const $li = document.createElement("li");
-                $li.innerHTML = `${el.name} -- ${el.email} -- ${el.phone}`;
+                $li.innerHTML = `${el.nombre} -- ${el.constelacion}`;
                 $fragment.appendChild($li);
                 });
             $axiosAsync.appendChild($fragment);

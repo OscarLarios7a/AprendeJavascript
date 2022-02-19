@@ -22,9 +22,9 @@
 <aside class="panel">
     <nav class="menu">
         <a data-scrollspy href="#seccion1">Objeto XMLHttpRequest</a>
-        <a data-scrollspy href="#seccion2">#seccion2</a>
-        <a data-scrollspy href="#seccion3">#seccion3</a>
-        <a data-scrollspy href="#seccion4">#seccion4</a>
+        <a data-scrollspy href="#seccion2">API Fetch</a>
+        <a data-scrollspy href="#seccion3">API Fetch + Async-Await</a>
+        <a data-scrollspy href="#seccion4">Librería Axios</a>
         <a data-scrollspy href="#seccion5">#seccion5</a>
         <a data-scrollspy href="#seccion6">#seccion6</a>
         <a data-scrollspy href="#seccion7">#seccion7</a>
@@ -44,12 +44,39 @@
         <h2>Object XMLHttpRequest</h2>
         <ol id="xhr"></ol>
     </section>
+    <section id="seccion2" class="section" data-scrollspy>
+        <h2>AJAX: API Fetch</h2>
+        <ol id="fetch"></ol>
+    </section>
+    <br>
+    <section id="seccion3" class="section" data-scrollspy>
+        <h2>API Fetch + Async-Await</h2>
+        <ol id="fetch-async"></ol>
+    </section><br>
+    <section id="seccion4" class="section" data-scrollspy>
+    <h2>AJAX: Librería Axios </h2>
+    <ol id="axios"></ol>
+        <table class="default">
+            <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Telefono</th>
+            </tr>
+            <tr>
+                <td id="axios"></td>
+            </tr>
+        </table>
+
+
+
+</section>
 
 </main>
  <!--Clase 87-->
 <button class="scrollBtnTop hidden">&#11014</button>
 <button class="themeDark">🌙</button>
 <!--<button class="themeLight"> </button>-->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script type="module" src="./js/index_dom.js"></script>
 <script type="module" src="./js/ajax_dom.js"></script>
 </body>

@@ -47,10 +47,10 @@ d.addEventListener("DOMContentLoaded", (e) => {
 
 
 // se utilizaran keydown,keypress y keyup
-d.addEventListener("keydown", (e) => {
+/*d.addEventListener("keydown", (e) => {
     atajos(e);
     moverEsfera(e,".ball",".stage");
-});
+});*/
 
 darkTheme(".themeDark", "darkMode"); //Clase 89 
 cnxNetwork(); //Clase 93

@@ -101,7 +101,7 @@
     const $axios = document.getElementById("axios");
     const $fragment = document.createDocumentFragment();
     const $fragment2 = document.createDocumentFragment();
-    const url = "https://jsonplaceholder.typicode.com/user";
+    const url = "https://jsonplaceholder.typicode.com/users";
 
     axios.get(url)
         .then((res) => {
@@ -125,5 +125,36 @@
          .finally(() => {
              console.log("Esto se ejecutara independientemente del resultado del Axios");
          });
+
+})();
+
+//? Funcion anonima autoejecutable Clase 110 AJAX: Librería Axios + Async-Await
+(() => {
+    const $axiosAsync = document.getElementById("axiosAsync");
+    const $fragment = document.createDocumentFragment();
+    const url = "https://jsonplaceholder.typicode.com/users";
+    //axios.get(url);
+    async function getAxios() { 
+        try {
+            let respuesta = await axios.get(url);
+            let json = await respuesta.data;
+
+            console.log(respuesta, json);
+            json.forEach((el) => {
+                const $li = document.createElement("li");
+                $li.innerHTML = `${el.name} -- ${el.email} -- ${el.phone}`;
+                $fragment.appendChild($li);
+                });
+            $axiosAsync.appendChild($fragment);
+        } catch (err) {
+            console.log(err);
+            let message = err.statusText || "Ocurrio un Error";
+            $axiosAsync.innerHTML = `Error ${err.status}: ${message}`;
+        }
+        finally {
+            console.log("Esto se ejecutara independientemente del resultado del Axios Async");
+        }
+    }
+    getAxios();
 
 })();

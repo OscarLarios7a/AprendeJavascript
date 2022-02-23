@@ -26,7 +26,7 @@
         <a data-scrollspy href="#seccion3">API Fetch + Async-Await</a>
         <a data-scrollspy href="#seccion4">Librería Axios</a>
         <a data-scrollspy href="#seccion5">Librería Axios + Async-Await </a>
-        <a data-scrollspy href="#seccion6">#seccion6</a>
+        <a data-scrollspy href="#seccion6">CRUD API REST Ajax</a>
         <a data-scrollspy href="#seccion7">#seccion7</a>
         <a data-scrollspy href="#seccion8">#seccion8</a>
         <a data-scrollspy href="#seccion9">#seccion9</a>
@@ -60,7 +60,45 @@
     <section id="seccion5" class="section" data-scrollspy>
         <h2>AJAX: Librería Axios + Async-Await  </h2>
         <ol id="axiosAsync"></ol>
+    </section><br>
+    <section id="seccion6" class="section" data-scrollspy>
+    <h2>CRUD API Rest Ajax </h2>
+        <section class="crud">
+            <article>
+                <h2 class="crud-title">Agregar Santo</h2>
+                <form class="crud-form">
+                    <input type="text" name="nombre" placeholder="Nombre" required><br><br>
+                    <input type="text" name="constelacion" placeholder="Constelación" required><br><br>
+                    <input type="submit" value="Enviar">
+                    <input type="hidden" name="id">
+                </form>
+            </article>
+            <article>
+                <h2>ver Santos </h2>
+                <table class="crud-table">
+                    <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Constelación</th>
+                        <th>Acciones</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </article>
+        </section>
     </section>
+    <template id="crud-template">
+        <tr>
+            <td class="name"></td>
+            <td class="constellation"></td>
+            <td>
+                <button class="edit">Editar</button>
+                <button class="delete">Eliminar</button>
+            </td>
+        </tr>
+    </template>
 
 </main>
  <!--Clase 87-->
@@ -70,6 +108,7 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script type="module" src="./js/index_dom.js"></script>
 <script type="module" src="./js/ajax_dom.js"></script>
+<script type="module" src="./js/crud_ajax.js"></script>
 </body>
 </script>
 </html>

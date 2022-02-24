@@ -28,6 +28,11 @@ main{
     min-height: 100vh;
 
 }
+/*Barra de Progreso Clase 125. Ejercicios AJAX - APIs: Uploader AJAX con Barra de Progreso*/
+progress{
+    margin-top: 1rem;
+}
+/*Fin de la Seccion*/
 .container{
     margin-left: auto;
     margin-right: auto;

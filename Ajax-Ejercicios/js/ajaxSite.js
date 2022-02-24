@@ -1,3 +1,4 @@
+//* Clase 122
 (() => {
     const d = document;
     const $main = d.querySelector("main");
@@ -24,7 +25,7 @@
     };
     d.addEventListener("DOMContentLoaded", (e) => {
         getHtml({
-            url: "./assets/home.html",
+            url: "./assets/cuerpo.html",
             success: (html) => $main.innerHTML=html,
             error: (err) => $main.innerHTML = `<h1>${err}</h1>`
         });

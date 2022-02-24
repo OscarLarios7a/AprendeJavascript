@@ -27,8 +27,8 @@
         <a data-scrollspy href="#seccion4">Librería Axios</a>
         <a data-scrollspy href="#seccion5">Librería Axios + Async-Await </a>
         <a data-scrollspy href="#seccion6">CRUD API REST Ajax</a>
-        <a data-scrollspy href="#seccion7">#seccion7</a>
-        <a data-scrollspy href="#seccion8">#seccion8</a>
+        <a data-scrollspy href="#seccion7">CRUD API Rest Fetch + Async </a>
+        <a data-scrollspy href="#seccion8">CRUD API Rest Axios + Async</a>
         <a data-scrollspy href="#seccion9">#seccion9</a>
         <a data-scrollspy href="#seccion10">#seccion10</a>
         <a data-scrollspy href="#seccion11">#seccion11</a>
@@ -89,6 +89,65 @@
             </article>
         </section>
     </section>
+    <br>
+    <section id="seccion7" class="section" data-scrollspy>
+    <h2>CRUD API Rest Fetch + Async </h2>
+        <section class="crud-fetch-async">
+            <article>
+                <h2 class="crud-title-fetch-async">Agregar Santo</h2>
+                <form class="crud-form-fetch-async">
+                    <input type="text" name="nombre" placeholder="Nombre" required><br><br>
+                    <input type="text" name="constelacion" placeholder="Constelación" required><br><br>
+                    <input type="submit" value="Enviar">
+                    <input type="hidden" name="id">
+                </form>
+            </article>
+            <article>
+                <h2>ver Santos </h2>
+                <table class="crud-table-fetch-async">
+                    <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Constelación</th>
+                        <th>Acciones</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </section>
+    <br>
+    <section id="seccion8" class="section" data-scrollspy>
+    <h2>CRUD API Rest Axios + Async </h2>
+        <section class="crud-axios-async">
+            <article>
+                <h2 class="crud-title-axios-async">Agregar Santo</h2>
+                <form class="crud-form-axios-async">
+                    <input type="text" name="nombre" placeholder="Nombre" required><br><br>
+                    <input type="text" name="constelacion" placeholder="Constelación" required><br><br>
+                    <input type="submit" value="Enviar">
+                    <input type="hidden" name="id">
+                </form>
+            </article>
+            <article>
+                <h2>ver Santos </h2>
+                <table class="crud-table-axios-async">
+                    <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Constelación</th>
+                        <th>Acciones</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </section>
+    <!--Template de Ajax-->
     <template id="crud-template">
         <tr>
             <td class="name"></td>
@@ -99,6 +158,29 @@
             </td>
         </tr>
     </template>
+    <!--Template de Fetch+Async-->
+    <template id="crud-template-fetch-async">
+        <tr>
+            <td class="name"></td>
+            <td class="constellation"></td>
+            <td>
+                <button class="edit-fetch-async">Editar</button>
+                <button class="delete-fetch-async">Eliminar</button>
+            </td>
+        </tr>
+    </template>
+    <!--Template de Axios+Async-->
+    <template id="crud-template-axios-async">
+        <tr>
+            <td class="name"></td>
+            <td class="constellation"></td>
+            <td>
+                <button class="edit-axios-async">Editar</button>
+                <button class="delete-axios-async">Eliminar</button>
+            </td>
+        </tr>
+    </template>
+
 
 </main>
  <!--Clase 87-->
@@ -109,6 +191,8 @@
 <script type="module" src="./js/index_dom.js"></script>
 <script type="module" src="./js/ajax_dom.js"></script>
 <script type="module" src="./js/crud_ajax.js"></script>
+<script type="module" src="./js/crud_fetch_async.js"></script>
+<script type="module" src="./js/crud_axios_async.js"></script>
 </body>
 </script>
 </html>

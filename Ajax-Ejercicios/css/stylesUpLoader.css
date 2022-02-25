@@ -11,9 +11,9 @@ html{
 
 body{
     margin: 0;
-    min-height: 100vh;
+    /*min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;*/
 }
 img{
     max-width: 100%;
@@ -26,8 +26,41 @@ main{
     align-items: center;
     text-align: center;
     min-height: 100vh;
-
 }
+/* Clase 126. Ejercicios AJAX - APIs: Uploader AJAX con Drag & Drop*/
+.dropzone{
+    margin-left: auto;
+    margin-right: auto;
+    border: thick dotted #000;
+    background-color: rgba(146, 77, 77, 0.5);
+    width: 80%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.dropzone.is-active{
+    border: thick dashed #000;
+    background-color: rgba(0, 128,0,.5);
+    animation: pulse 1.5s infinite;
+    animation-timing-function: linear;
+}
+
+/*Seccion de Animacion*/
+@keyframes pulse{
+    0%,
+    100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+}
+
+/*Fin de la Seccion*/
+
 /*Barra de Progreso Clase 125. Ejercicios AJAX - APIs: Uploader AJAX con Barra de Progreso*/
 progress{
     margin-top: 1rem;

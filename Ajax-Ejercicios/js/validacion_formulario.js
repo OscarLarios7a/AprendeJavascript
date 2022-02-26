@@ -41,17 +41,20 @@ function contactoFormulario() {
 
 
         fetch($urlmail,{
-            method: "POST",
-            body: new FormData(e.target),
-            
+           method: "POST",
+           headers: {
+               'Content-Type': 'application/json;charset=utf-8',
+               
+            },
+           body: new FormData(e.target)
         })
-            .then(res => res.ok ? res.json() : Promise.reject(res))
-            .then(json => {
+            .then(res => res.json() )
+            .then(data => {
                 //console.log(res);
-                console.log(json);
+                console.log(data);
                 $loader.classList.add("none");
                 $respuesta.classList.remove("none");
-                $respuesta.innerHTML = `<p><b>${json.message}</b></p>`;
+                $respuesta.innerHTML = `<p><b>${data.message}</b></p>`;
                 $formulario.reset();
             })
             .catch((err) => {

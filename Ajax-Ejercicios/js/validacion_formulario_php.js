@@ -4,7 +4,7 @@ const d = document;
 function contactoFormulario() {
     const $formulario = d.querySelector(".contact-form");
     const $inputs = d.querySelectorAll(".contact-form [required]");
-    const $urlmail = "https://formsubmit.co/ajax/javier.atoaxaca@gmail.com";
+    const $urlmail = "./php/send_mail.php";
 
     $inputs.forEach((input) => {
         const $span = d.createElement("span");
@@ -46,7 +46,8 @@ function contactoFormulario() {
                'Content-Type': 'application/json;charset=utf-8',
                'Accept': 'application/json' 
             },
-           body: new FormData(e.target)
+            body: new FormData(e.target),
+           mode:"cors"
         })
             .then(res => res.ok ? res.json():Promise.reject(res) )
             .then(data => {

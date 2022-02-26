@@ -1,9 +1,10 @@
-
+//? Clase 127. Ejercicios AJAX - APIs: Envío Formulario con Fetch y FormSubmit
 const d = document;
 
 function contactoFormulario() {
     const $formulario = d.querySelector(".contact-form");
     const $inputs = d.querySelectorAll(".contact-form [required]");
+    const $urlmail = "https://formsubmit.co/ajax/javier.atoaxaca@gmail.com";
 
     $inputs.forEach((input) => {
         const $span = d.createElement("span");
@@ -13,7 +14,7 @@ function contactoFormulario() {
         input.insertAdjacentElement("afterend", $span);
     });
     d.addEventListener("keyup",(e) => {
-        if(e.target.matches(".contact-form[required]")){ 
+        if(e.target.matches(".contact-form [required]")){ 
             let $input = e.target;
             let pattern = $input.pattern || $input.dataset.pattern;  //operador de corto circuito
 
@@ -37,16 +38,41 @@ function contactoFormulario() {
         const $loader = d.querySelector(".formLoader");
         const $respuesta = d.querySelector(".contactFormResponse");
         $loader.classList.remove("none");
-        setTimeout(() => {
-            $loader.classList.add("none");
-            $respuesta.classList.remove("none");
-            $formulario.reset();
-            setTimeout(() => {
+
+
+        fetch($urlmail,{
+            method: "POST",
+            body: new FormData(e.target),
+            
+        })
+            .then(res => res.ok ? res.json() : Promise.reject(res))
+            .then(json => {
+                //console.log(res);
+                console.log(json);
+                $loader.classList.add("none");
+                $respuesta.classList.remove("none");
+                $respuesta.innerHTML = `<p><b>${json.message}</b></p>`;
+                $formulario.reset();
+            })
+            .catch((err) => {
+                console.log(err);
+                let message = err.statusText || "Ocurrio un Error envia de nuevo";
+                $respuesta.innerHTML=`Error: <p><b>${err.status} : ${message}</b></p>`;
+            })
+            .finally(() => setTimeout(() => {
                 $respuesta.classList.add("none");
-            },3000);
-        },3000);
+                $respuesta.innerHTML = "";
+            }, 3000));
     });
 }
-d.addEventListener("DOMContentLoaded", (e) => {
-    contactoFormulario();
-});
+d.addEventListener("DOMContentLoaded", contactoFormulario);
+ 
+//* SE COMENTA ESTA PARTE DEL CODIGO PARA PODER REALIZAR LA PETICION A TRAVES DEL API FETCH DE AJAX
+/*setTimeout(() => {
+    $loader.classList.add("none");
+    $respuesta.classList.remove("none");
+    $formulario.reset();
+    setTimeout(() => {
+        $respuesta.classList.add("none")
+    },3000);
+//}, 3000);*/

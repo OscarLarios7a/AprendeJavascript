@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-dark>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uploader con Ajax</title>
-    <link rel="stylesheet" href="./css/stylesUpLoader.css">
-    <!--<script type="module" src="./js/includeHtml.js"></script>-->
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+
+
 </head>
-<body>
+<body data-dark>
     <header class="header">
-    <section class="header-content container">
-        <article class="logo">
-        <img src="https://jonmircha.com/img/kEnAi.svg" alt="kEnAi">
-        </article>
-        <h1>Ejercicio Validando Formulario con Fetch</h1>
-    </section>
-</header>
-    <main>
+        <h1>Envio de Formulario con Fetch y Ajax</h1>
+    </header>
+<main>
+<!--Clase 101. DOM: Ejercicios Prácticos | Validación de Formularios con HTML5 
+    //? Clase 127. Ejercicios AJAX - APIs: Envío Formulario con Fetch y FormSubmit -->
     <section id="seccion14" class="section" data-scrollspy>
-        <form action="https://formsubmit.co/javier.atoaxaca@gmail.com" method="POST" class="contact-form" target="_blank">
+        <h2>Validacion de Formulario</h2>
+        <form class="contact-form"> <!--action="https://formsubmit.co/javier.atoaxaca@gmail.com" method="POST" target="_blank">-->
             <legend>Envianos tus comentarios </legend>
                 <input type="text" name="name" placeholder="Escribe tu nombre" title="Nombres solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
                 <input type="email" name="email" placeholder="Escribe tu Email" title="Email es incorrecto" required pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
@@ -35,12 +34,8 @@
             </div>
         </form>
     </section>
-    </main>
-   <footer class="footer container">
-       <p><small>Sitio Diseñado por Kenai</small></p>
-   </footer>
-    <script type="module" src="./js/validacion_formulario.js"></script>
-     <!--<script type="module" src="./js/ajaxSite.js"></script>-->
-    
+</main>
+<script type="module" src="./js/validacion_formulario.js"></script>
 </body>
+</script>
 </html>

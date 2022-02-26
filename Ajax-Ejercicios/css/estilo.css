@@ -1,0 +1,525 @@
+/*RESETEO */
+/*creacion de variables para la manipulacion de los elementos*/
+:root{
+    --main-font: sans-serif;
+    --font-size:16px;
+    --main-color:#f7df1e;
+    --second-color:rgb(255, 255, 255);
+    --tercerd-color:rgba(51, 51, 49, 0.85);
+    --main-modal-color:rgba(247,222,30,0.85);
+    --second-modal-color:rgba(34,34,34,0.85);
+    --container-width:1200px;
+    /*Variables de los botones*/
+}
+html{
+    box-sizing: border-box;
+    font-family: var(--main-font);
+    font-size: var(--font-size);
+    scroll-behavior: smooth; /**/
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/*menu Hamburguesa */
+.header{
+    position: sticky;
+    z-index: 997;
+    top: 0;
+    padding: 1rem;
+    background-color: var(--main-color);
+    color: var(--second-color);
+}
+
+.header h1{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section{
+    padding: 2rem;
+    padding-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: var(--container-width);
+    min-height: 100vh;
+    text-align: center;
+}
+
+.panel-btn{
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vw;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+}
+
+.panel{
+    position: fixed;
+    z-index: 998;
+    top:0; /*estira los elementos en toda direccion */
+    bottom: 0; /*estira los elementos en toda direccion */
+    left: 0;
+    right: 0;
+    width: 100%;
+    overflow-y: auto; /*se pone esta propiedad para generar un scroll para el panel*/
+    background-color: var(--second-modal-color);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease,opacity 0.3s ease;
+    /*desplazamiento de arriba->Abajo*/
+    transform: translate(0,-100%);
+    /*desplazamiento de Abajo->Arriba*/
+    /*transform: translate(0,100%);*/
+    /*desplazamiento de Derecha -> Izquierda*/
+    /*transform: translate(100%,0);*/
+    /*desplazamiento de Izquierda -> Derecha */
+    /*transform: translate(-100%,0);*/
+}
+
+.panel.is-active{
+    transform: translate(0,0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/**Menu de Navegacion**/
+.menu{
+    width: inherit;
+    display: flex;
+    flex-direction: column; /*el menu se vera de forma vertical en ves de horizontal*/
+    justify-content: space-evenly; /*genera un espaciado a cada elemento a:href*/
+    align-items: center;
+    text-align: center;
+}
+
+.menu a{
+    text-decoration: none;
+    padding: 2rem;
+    width: inherit;
+    display: block;
+    font-size: 1.5rem;
+    color:var(--second-color);
+    transition: all 0.3s ease;
+}
+.menu a:hover{
+    font-weight: bold;
+    color: var(--second-modal-color);
+    background-color: var(--main-modal-color);
+}
+
+/*Estilos para los Botones de la Seccion de Reloj Digital y Alarma Digital*/
+.relojA{
+    width: 9rem;
+    height: 4rem;
+    border-radius: 10%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+}
+.relojA:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+}
+.relojD{
+    width: 9rem;
+    height: 4rem;
+    border-radius: 10%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #720505;
+    border-radius: 6px;
+    border: 2px solid #d60101;
+}
+.relojD:hover{
+    color: #720505;
+    background-color: #ffffff;
+}
+.alarmaA{
+    width: 9rem;
+    height: 4rem;
+    border-radius: 10%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+}
+.alarmaA:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+}
+.alarmaD{
+    width: 9rem;
+    height: 4rem;
+    border-radius: 10%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #720505;
+    border-radius: 6px;
+    border: 2px solid #d60101;
+}
+.alarmaD:hover{
+    color: #720505;
+    background-color: #ffffff;
+}
+
+/**Fin Seccion de Estilos para los Botones**/
+
+/**Eventos con el Teclado de la Clase 84 y 85**/
+/*Estilos para la clase stage y ball */
+.stage{
+    display: flex;
+    min-height: 50vh;
+    background-color: var(--tercerd-color);
+}
+.ball {
+    margin: auto;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}
+
+/**Eventos con el Elementos Regresivos de la Clase 86**
+/*Estilos para la clase countDown */
+
+/**Eventos con el Scroll Top Button Clase 87**
+/*Estilos para la clase scrollTopButton*/
+.scrollBtnTop{
+    position:fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: calc(4.25rem + 1vw);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--main-color);
+    color: var(--tercerd-color);
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    transition: all 0.3s ease-out;
+}
+.scrollBtnTop:hover{
+    background-color: var(--tercerd-color);
+    color: var(--main-color);
+}
+
+.hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+/**Eventos con el Theme Dark Page Clase 88**
+/*Estilos para la clase themeDark*/
+
+.themeDark {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    left: 1rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--main-color);
+    color: var(--tercerd-color);
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    transition: all 0.3s ease-out;
+}
+
+.themeDark:hover{
+     background-color: var(--tercerd-color);
+     color: var(--main-color);
+}
+
+.darkMode{
+    background-color: var(--tercerd-color);
+    color: var(--main-color);
+}
+/** Clase 90 **/
+.responsive{
+    text-decoration: none;
+    border-radius: 10%;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #720505;
+    border-radius: 6px;
+    border: 2px solid #d60101;
+}
+.responsive:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+}
+
+/*Clase 93 DOM : Detección del estado de la red */
+.online.offline{
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #1b5e20;
+    color: #fff;
+}
+.offline{
+    background-color: #b71c1c;
+}
+
+/* Clase 96. DOM: Ejercicios Prácticos | Filtros de Búsqueda*/
+/*Estilos de la Seccion de Filtros de Busqueda*/
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr))
+}
+.card{
+    background-color: var(--second-color);
+    color: var(--main-color);
+    transition: all 0.3s ease-out;
+}
+.card img{
+    width: 100%;
+    height: auto;
+}
+.card figcaption{
+    padding: 1rem;
+}
+.filter{
+/* display: none;*/
+    visibility: hidden;
+    opacity: 0;
+    order: 1;
+}
+
+/* Clase 98. DOM: Ejercicios Prácticos | Responsive Slider  */
+/*Estilos de la Seccion de Slider Responsive */
+
+.slider{
+    position:relative ;
+    width: 80%;
+    margin: 1rem auto;
+    text-align: center;
+}
+.slider-slides{
+    position: relative;
+    height: 400px;
+}
+.slider-slide{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+    visibility: hidden;
+}
+.slider-slide img{
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    object-position:  50% 0%;
+}
+.slider-slide.active{
+    opacity: 1;
+    visibility: visible;
+}
+.slider-btn{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider a{
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border-radius:50%;
+    /*border: thin solid #fff;*/
+    text-decoration: none;
+    background-color: var(--tercerd-color);
+    color: var(--main-color);
+    transition: all 0.3s ease;
+    text-align: center;
+    font-size: 3rem;
+}
+.slider a:hover{
+    background-color:  var(--main-color);
+    color: var(--tercerd-color);
+}
+
+/*Clase 100. DOM: Video Inteligente (IntersectionObserver & VisibilityChange)*/
+.videoplay{
+    width: 100%;
+    height: 100%;
+}
+    /*<!--Clase 101. DOM: Ejercicios Prácticos | Validación de Formularios con HTML5 -->*/
+.contact-form{
+    --form-ok-color: #4ca450;
+    --form-error-color:#f44336;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+.contact-form > *{
+    padding: 0.5rem;
+    margin: 1rem auto;
+    display: block;
+    width: 100%;
+}
+.contact-form textarea{
+    resize: none;
+}
+
+.contact-form legend,
+.contactFormResponse{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+.contact-form input,textarea{
+    font-size: 1.2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.contact-form input[type="submit"]{
+    width: 50%;
+    font-weight: bold;
+    cursor: pointer;
+}
+.contact-form *::placeholder{
+    color: #720505;
+}
+.contact-form [required]:valid{
+    border: thin solid var(--form-ok-color);
+}
+.contact-form [required]:invalid{
+    border: thin solid var(--form-error-color);
+}
+/*para los mensajes de error*/
+.contact-form-error{
+    margin-top: -1rem;
+    font-size: 80%;
+    background-color: var(--form-error-color);
+    color: white;
+    transition: all 800ms ease;
+}
+.contact-form-error.is-active{
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+}
+.none{
+    display: none;
+}
+/*Seccion de Animacion*/
+@keyframes show-message{
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+/*Clase: 99. DOM: Ejercicios Prácticos | ScrollSpy con Intersection Observer*/
+@media screen and (min-width:1024px) {
+    body{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 4rem auto;
+        grid-template-areas: 
+        "header header"
+        "main   panel";
+    }
+    main{
+        grid-area: main;
+    }
+    .header{
+        grid-area: header;
+    }
+    .panel{
+        grid-area: panel;
+        align-self:start;
+        position: sticky;
+        top: 4rem;
+        /*height: 50%;*/
+        justify-content:flex-start;
+        background-color: var(--tercerd-color);
+        transform: translate(0,0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .panel-btn{
+        display: none;
+    }
+    .menu{
+        justify-content:start;
+        text-align:right;
+    }
+    .menu a{
+        font-size: 1.2rem;
+        padding:0.75rem;
+    }
+    .menu a:hover, .menu a.active{
+        color:var(--tercerd-color);
+        background-color: var(--main-color);
+    }
+    .scrollBtnTop{
+    right: initial;
+    left: calc(4.25rem + 1vw);
+    }
+    .scrollBtnTop:hover{
+        background-color: var(--tercerd-color);
+        color: var(--main-color);
+    }
+}
